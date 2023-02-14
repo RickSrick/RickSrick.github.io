@@ -1,8 +1,127 @@
-<html>
-  <head>
-  </head>
-  
-  <body>
-    Hello World I'm on Internet!
-  </body>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Quiz Basi </title>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			processEscapes: true
+			}
+		});
+	</script>
+    
+	<script type="text/javascript"
+			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+</head>
+
+<body>
+
+    <style>
+        .table-edit {
+            border-color: #b3b3b3!important;
+        }
+        .responsive-img {
+            max-width: 100%; 
+            height: auto;
+        }
+    </style>
+
+	<div class="container" style="margin-top: 1em">
+		<ul class="nav nav-tabs justify-content-center">
+			<li class="nav-item">
+			<a class="nav-link" href="index.html">Quiz</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link active" href="listQuestions.html">Tutte le Domande</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="listAnswers.html">Tutte le Risposte</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link disabled" href="#">...</a>
+			</li>
+		</ul>
+	</div>
+
+	<h3 style="text-align:center; margin-top:2em">Quiz Basi di Dati</h3>
+	<div style='width:70%; margin: auto; max-width:800px; margin-bottom: 3em;' id="quiz"></div>
+	<div id="ris"></div>
+	<div style="text-align:center; margin-bottom:2em">
+		<button type='button' id='submit' class='btn btn-primary' onclick="check()">Controllo</button>
+		<button style="display:none" type='button' id='refresh' class='btn btn-primary' onclick="window.location.reload()">Nuovo quiz</button>
+	</div>
+	
+	<script>
+		const numQuest=20
+		const auxSet= new Set()
+
+        const goodEmoji = ["🤩", "🤯", "🥳", "💦", "👌", "👏" ];
+        const badEmoji = ["🤔", "😐", "	🙄", "😵", "🥸", "🤡" ];
+		
+		quiz = document.getElementById("quiz")
+
+		fetch("answers.json").then(res=>res.json()).then(data=>{
+
+			while(auxSet.size<numQuest){
+				auxSet.add(Math.floor(Math.random() * data.length))}
+
+			let n=0
+			
+			auxSet.forEach(i=>{
+				n++
+				let radios=""
+				let element=data[i]
+				Object.keys(element.answers).forEach(e=>{
+						radios+="<div class='form-check'>"+
+									"<input class='form-check-input' type='radio' name='"+i+"'value='"+e+"'>"+
+									"<label class='form-check-label' id='"+(i+e)+"'>"+element.answers[e]+"</label>"+
+								"</div>"
+					})
+
+			
+				quiz.innerHTML+="<div class='card text-center shadow-sm' style='margin-top:2em'>"+
+						"<div class='card-header'>Domanda "+n+"</div>"+
+						"<div class='card-body'>"+
+							"<h6 class='card-title' style='margin-bottom: 1.8em; line-height:2em'>"+element.question+"</h6>"+
+								"<div class='card-text' style='text-align:left'>"+radios+"</div>"+
+						"</div>"+	
+						"<div class='card-footer text-muted'>Categoria: "+element.category+"</div>"
+			})
+		})
+
+		function check(){
+			let count=0
+			fetch("answers.json").then(res=>res.json()).then(data=>{
+				auxSet.forEach(i=>{
+				if(document.querySelector("input[name='"+i+"']:checked")==null){}
+				else if(document.querySelector("input[name='"+i+"']:checked").value==data[i].correctAnswer){
+						count++
+					}
+				else{
+					let value=document.querySelector("input[name='"+i+"']:checked").value
+					document.getElementById(i+value).innerHTML+="<tab> &#10060"
+				}
+				let radio=document.getElementById(i+data[i].correctAnswer)
+				radio.innerHTML+="<tab> &#9989"
+				radio.classList.add("alert")
+				radio.classList.add("alert-success")
+				})
+				let ris=""
+				if(count>17){ris=goodEmoji[Math.floor(Math.random() * goodEmoji.length)]}
+				else{ris=badEmoji[Math.floor(Math.random() * badEmoji.length)]}
+				document.getElementById("ris").innerHTML="<h3 style='text-align:center; margin-top:2em'>Risultato: "+count+"/"+numQuest+" "+ris+"</h3>"
+				document.getElementById("submit").disabled=true
+				document.getElementById("refresh").style["display"]="inline-block"
+			})	
+		}
+
+		
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
