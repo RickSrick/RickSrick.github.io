@@ -947,7 +947,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "SianoSia R(A,B,C) uno schema di relazione, per costruzione già in prima forma normale.Se in R sussistono solo le dipendenze funzionali:<br>A$\\to$B<br>B$\\to$C<br>oltre oltre a quelle eventualmente implicate da queste e quelle banali, allora la più forte forma normale soddisfatta di R è:",
+		"question": "Sia R(A,B,C) uno schema di relazione, per costruzione già in prima forma normale.Se in R sussistono solo le dipendenze funzionali:<br>A$\\to$B<br>B$\\to$C<br>oltre oltre a quelle eventualmente implicate da queste e quelle banali, allora la più forte forma normale soddisfatta di R è:",
 		"answers": {
 			"a": "La prima.",
 			"b": "La seconda.",
