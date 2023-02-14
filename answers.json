@@ -44,7 +44,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "L'operazione di algebra relazionale estesa<br><br> ${}_{Dipartimento} {F}_{MAX(Stipendio)}\\;(DIPENDENTE)$<br><br>applicata alla relazione seguente,contiene:<br></br><table class='table table-bordered'> <tbody> <tr><td colspan=\"4\" style=\"text-align:center\"><b>DIPENDENTE<b/></td></tr><tr> <th>Codice</th> <th>Cognome</th> <th>Dipartimento</th> <th>Stipendio</th> </tr> <tr> <td>1</td> <td>Rossi</td> <td>1</td> <td>10000</td> </tr> <tr> <td>2</td> <td>Verdi</td> <td>2</td> <td>15000</td> </tr> <tr> <td>3</td> <td>Bianchi</td> <td>3</td> <td>20000</td> </tr> <tr> <td>4</td> <td>Neri</td> <td>4</td> <td>10000</td> </tr> </tbody> </table>",
+		"question": "L'operazione di algebra relazionale estesa<br><br> ${}_{Dipartimento} {F}_{MAX(Stipendio)}\\;(DIPENDENTE)$<br><br>applicata alla relazione seguente,contiene:<br></br><div class='table-responsive'><table class='table table-bordered'> <tbody> <tr><td colspan=\"4\" style=\"text-align:center\"><b>DIPENDENTE<b/></td></tr><tr> <th>Codice</th> <th>Cognome</th> <th>Dipartimento</th> <th>Stipendio</th> </tr> <tr> <td>1</td> <td>Rossi</td> <td>1</td> <td>10000</td> </tr> <tr> <td>2</td> <td>Verdi</td> <td>2</td> <td>15000</td> </tr> <tr> <td>3</td> <td>Bianchi</td> <td>3</td> <td>20000</td> </tr> <tr> <td>4</td> <td>Neri</td> <td>4</td> <td>10000</td> </tr> </tbody> </table></div>",
 		"answers": {
 			"a": "1 tupla.",
 			"b": "2 tuple.",
@@ -66,7 +66,7 @@
 		"category": "Schema Relazionale"
 	},
 	{
-		"question": "Sia data la relazione con schema:<br/><br/><table class='table table-bordered'><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>PERSONA<b/></td></tr><tr><th><u>Codice</u></th><th>Cognome</th><th>Numero Patente</th></tr></tbody></table>In quale dei seguenti casi non è corretto inserire un valore nullo per NumeroPatente?",
+		"question": "Sia data la relazione con schema:<br/><br/><div class='table-responsive'><table class='table table-bordered'><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>PERSONA<b/></td></tr><tr><th><u>Codice</u></th><th>Cognome</th><th>Numero Patente</th></tr></tbody></table></div>In quale dei seguenti casi non è corretto inserire un valore nullo per NumeroPatente?",
 		"answers": {
 			"a": "Quando la persona non dispone di patente.",
 			"b": "Quando è noto che la persona dispone di patente con NumeroPatente uguale a 0.",
@@ -209,7 +209,7 @@
 		"category": "Schema Relazionale"
 	},
 	{
-		"question": "L'istruzione di SQL standard <pre style='text-align:left'> SELECT * FROM PERSONA_1<br> UNION<br> SELECT * FROM PERSONA_2;</pre> applicata alle tabelle<br>PERSONA_1<br> <table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table > PERSONA_2<br> <table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table> restituisce una tabella con:",
+		"question": "L'istruzione di SQL standard <pre style='text-align:left'> SELECT * FROM PERSONA_1<br> UNION<br> SELECT * FROM PERSONA_2;</pre> applicata alle tabelle<br>PERSONA_1<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table></div>PERSONA_2<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table></div> restituisce una tabella con:",
 		"answers": {
 			"a": "0 righe.",
 			"b": "1 righe.",
@@ -254,7 +254,7 @@
 	},
 
 	{
-		"question": "La seguente relazione:<br><table class='table table-bordered'><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>PARTITA<b/></td></tr><tr><th>SquadraCasa</th><th>SquadraOspite</th><th>Risultato</th></tr><tr><td>Juventus</td><td>Inter</td><td>1-1</td></tr><tr><td>Milan</td><td>Torino</td><td>0-0</td></tr></tbody></table>",
+		"question": "La seguente relazione:<br><div class='table-responsive'><table class='table table-bordered'><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>PARTITA<b/></td></tr><tr><th>SquadraCasa</th><th>SquadraOspite</th><th>Risultato</th></tr><tr><td>Juventus</td><td>Inter</td><td>1-1</td></tr><tr><td>Milan</td><td>Torino</td><td>0-0</td></tr></tbody></table></div>",
 		"answers": {
 			"a": "Ha cardinalità 2 e grado 3.",
 			"b": "Ha cardinalità 3 e grado 2.",
@@ -331,7 +331,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Siano date le due relazioni: <br> STUDENTE_1<br> <table class='table table-bordered'> <tbody> <tr> <th><u>Matricola</u></th> <th>Cognome</th> </tr> <tr> <td>1</td> <td>Verdi</td> </tr> </tbody> </table>  STUDENTE_2<br> <table class='table table-bordered'> <tbody> <tr> <th><u>Matricola</u></th> <th>Cognome</th> </tr> <tr> <td>2</td> <td>Rossi</td> </tr> </tbody> </table> L'operazione STUDENTE_1-STUDENTE_2 restituisce: </font>",
+		"question": "Siano date le due relazioni: <br> STUDENTE_1<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th><u>Matricola</u></th> <th>Cognome</th> </tr> <tr> <td>1</td> <td>Verdi</td> </tr> </tbody> </table></div>  STUDENTE_2<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th><u>Matricola</u></th> <th>Cognome</th> </tr> <tr> <td>2</td> <td>Rossi</td> </tr> </tbody> </table></div> L'operazione STUDENTE_1-STUDENTE_2 restituisce: </font>",
 		"answers": {
 			"a": "La relazione vuota.",
 			"b": "La relazione <table class='table table-edit table-bordered'> <tbody> <tr> <td><u>Matricola</u></td> <td>Cognome</td> </tr> <tr> <td>1</td> <td>Verdi</td> </tr> </tbody> </table>",
@@ -485,7 +485,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Sia $R(A, B, C)$ uno schema di relazione. Dall' esame della sua istanza seguente $R$<br>  <table class='table table-bordered'> <tbody> <tr> <th>A</th> <th>B</th> <th>C</th> </tr> <tr> <td>a1</td> <td>b1</td> <td>c1</td> </tr> <tr> <td>a1</td> <td>b2</td> <td>c1</td> </tr> </tbody> </table> dove b1 $\\neq$ b2:",
+		"question": "Sia $R(A, B, C)$ uno schema di relazione. Dall' esame della sua istanza seguente $R$<br>  <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th>A</th> <th>B</th> <th>C</th> </tr> <tr> <td>a1</td> <td>b1</td> <td>c1</td> </tr> <tr> <td>a1</td> <td>b2</td> <td>c1</td> </tr> </tbody> </table></div> dove b1 $\\neq$ b2:",
 		"answers": {
 			"a": "Si deduce che $A$ è certamente chiave di R.",
 			"b": "Si deduce che $B$ è certamente chiave di R.",
@@ -661,7 +661,7 @@
 		"category": "Dipendenze Funzionali"
 	},
 	{
-		"question": "L'istruzione SQL standard<br><br> <pre style='text-align:left'>SELECT Cognome<br>FROM STUDENTE;</pre>applicata alla tabella seguente,  restituisce:<br><table class=\"table table-bordered\"> <tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>STUDENTE<b/></td></tr> <tr><th><u>Matricola</u></th> <th>Cognome</th></tr> <tr> <td>1</td> <td>Rossi</td></tr><tr><td>2</td><td>Rossi</td></tr></tbody></table>",
+		"question": "L'istruzione SQL standard<br><br> <pre style='text-align:left'>SELECT Cognome<br>FROM STUDENTE;</pre>applicata alla tabella seguente,  restituisce:<br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>STUDENTE<b/></td></tr> <tr><th><u>Matricola</u></th> <th>Cognome</th></tr> <tr> <td>1</td> <td>Rossi</td></tr><tr><td>2</td><td>Rossi</td></tr></tbody></table></div>",
 		"answers": {
 			"a": "0 righe.",
 			"b": "1 riga.",
@@ -683,7 +683,7 @@
 		"category": "Dipendenze Funzionali"
 	},
 	{
-		"question": "Si supponga che l'istruzione SQL:</br><pre style='text-align:left'>CREATE TABLE RICAMBIO(<br>ID SMALLINT PRIMARY KEY,<br>Costruttore VARCHAR(30),<br>Codice VARCHAR(20)<br>UNIQUE(Costruttore,Codice));</pre>crei la tabella del solo schema di base di dati relazionale presente in un catalogo. Se la tabella è originariamente popolata come in figura<br><table class=\"table table-bordered\"><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>RICAMBIO<b/></td></tr><tr><th><u>ID</u></th><th>Costruttore</th><th>Codice</th></tr><tr><td>1</td><td>Brembo</td><td>B62.15.170</td></tr></tbody></table>l'inserimento<br><pre>INSERT INTO RICAMBIO VALUES(2,'Brembo','B62.15.170');</pre>",
+		"question": "Si supponga che l'istruzione SQL:</br><pre style='text-align:left'>CREATE TABLE RICAMBIO(<br>ID SMALLINT PRIMARY KEY,<br>Costruttore VARCHAR(30),<br>Codice VARCHAR(20)<br>UNIQUE(Costruttore,Codice));</pre>crei la tabella del solo schema di base di dati relazionale presente in un catalogo. Se la tabella è originariamente popolata come in figura<br><div class='table-responsive'><table class=\"table table-bordered\"><tbody><tr><td colspan=\"4\" style=\"text-align:center\"><b>RICAMBIO<b/></td></tr><tr><th><u>ID</u></th><th>Costruttore</th><th>Codice</th></tr><tr><td>1</td><td>Brembo</td><td>B62.15.170</td></tr></tbody></table></div>l'inserimento<br><pre>INSERT INTO RICAMBIO VALUES(2,'Brembo','B62.15.170');</pre>",
 		"answers": {
 			"a": "Verrà certamente accettato.",
 			"b": "Verrà rifiutato,perchè viola il vincolo di chiave di primaria.",
@@ -1057,7 +1057,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Per lo schema ER della figura seguente<br><br><img src=\"img/22.png\" class=\"responsive-img\"><br>è stata preparata la tavola dei volumi<br><table class=\"table table-bordered\"><tbody><tr><th>Concetto</th><th>Tipo</th><th>Volume</th></tr><tr><td>E1</td><td>E</td><td>10</td></tr><tr><td>E2</td><td>E</td><td>20</td></tr><tr><td>E3</td><td>E</td><td>5</td></tr><tr><td>R</td><td>R</td><td>X</td></tr></tbody></table>Quale valore deve avere X perchè la tavola dei volumi sia corretta?",
+		"question": "Per lo schema ER della figura seguente<br><br><img src=\"img/22.png\" class=\"responsive-img\"><br>è stata preparata la tavola dei volumi<br><div class='table-responsive'><div class='table-responsive'><table class=\"table table-bordered\"><tbody><tr><th>Concetto</th><th>Tipo</th><th>Volume</th></tr><tr><td>E1</td><td>E</td><td>10</td></tr><tr><td>E2</td><td>E</td><td>20</td></tr><tr><td>E3</td><td>E</td><td>5</td></tr><tr><td>R</td><td>R</td><td>X</td></tr></tbody></table></div></div>Quale valore deve avere X perchè la tavola dei volumi sia corretta?",
 		"answers": {
 			"a": "10.",
 			"b": "20.",
@@ -1114,16 +1114,16 @@
 	{
 		"question": "Siano R<sub>1</sub>(X)e R<sub>2</sub>(X) due schemi di relazione, r<sub>1</sub>e r<sub>2</sub> generiche istanze di R<sub>1</sub> e R<sub>2</sub>, rispettivamente, C una condizione di join. È<i>certamente vero</i> che:",
 		"answers": {
-			"a": "$max\\{|r_1|, |r_2|\\} \\leq |r_1 \\bowtie_c r_2| \\leq |r_1| * |r_2|$.",
+			"a": "$max\\{|r_1|, |r_2|\\}$ $\\leq |r_1 \\bowtie_c r_2|$ $\\leq |r_1| * |r_2|$.",
 			"b": "$0 \\leq |r_1 \\bowtie_c r_2| \\leq |r_1| + |r_2|$.",
-			"c": "$min\\{|r_1|, |r_2|\\} \\leq |r_1 \\bowtie_c r_2| \\leq |r_1| * |r_2|$.",
+			"c": "$min\\{|r_1|, |r_2|\\}$ $\\leq |r_1 \\bowtie_c r_2|$ $\\leq |r_1| * |r_2|$.",
 			"d": "$ 0 \\leq |r_1 \\bowtie_c r_2| \\leq |r_1| * |r_2|$."
 		},
 		"correctAnswer": "d",
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Utilizzando la logica a 3 valori, la condizione di selezione<br>Età $\\neq$ 20<br>applicata all‘unica tupla della relazione seguente<br>PERSONE<br><table class=\"table table-bordered\"> <tbody><tr><th>Nome</th><th>Età</th><th>Reddito</th></tr><tr><td>Marco</td><td>NULL</td><td>45000</td></tr></tbody></table>",
+		"question": "Utilizzando la logica a 3 valori, la condizione di selezione<br>Età $\\neq$ 20<br>applicata all‘unica tupla della relazione seguente<br>PERSONE<br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Nome</th><th>Età</th><th>Reddito</th></tr><tr><td>Marco</td><td>NULL</td><td>45000</td></tr></tbody></table></div>",
 		"answers": {
 			"a": "Assume valore True.",
 			"b": "Assume valore False.",
@@ -1134,7 +1134,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "L'operazione di algebra relazionale estesa<br>${}_{Nome, Cognome} {F}_{MAX(Saldo)}\\;(CONTO\\_CORRENTE)$ </br></br>applicata alla relazione seguente:<br> <table class=\"table table-bordered\"> <tbody><tr><td colspan=\"4\" style='text-align:center'><b>CONTO_CORRENTE</b></td></tr> <tr> <th><u>Numero</u></th> <th>Nome</th> <th>Cognome</th> <th>Saldo</th> </tr> <tr> <td>1</td> <td>Luca</td> <td>Rossi</td> <td>200</td> </tr> <tr><td>2</td><td>Luca</td><td>Verdi</td><td>200</td></tr><tr><td>3</td><td>Luca</td><td>Rossi</td><td>200</td></tr></tbody></table>",
+		"question": "L'operazione di algebra relazionale estesa<br>${}_{Nome, Cognome} {F}_{MAX(Saldo)}\\;$$(CONTO\\_CORRENTE)$ </br></br>applicata alla relazione seguente:<br> <div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><td colspan=\"4\" style='text-align:center'><b>CONTO_CORRENTE</b></td></tr> <tr> <th><u>Numero</u></th> <th>Nome</th> <th>Cognome</th> <th>Saldo</th> </tr> <tr> <td>1</td> <td>Luca</td> <td>Rossi</td> <td>200</td> </tr> <tr><td>2</td><td>Luca</td><td>Verdi</td><td>200</td></tr><tr><td>3</td><td>Luca</td><td>Rossi</td><td>200</td></tr></tbody></table></div>",
 		"answers": {
 			"a": "0 tuple.",
 			"b": "1 tupla.",
