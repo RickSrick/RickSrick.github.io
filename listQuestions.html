@@ -32,6 +32,21 @@
 		.check-quest{
 			opacity: 1!important;
 		}
+        .quiz_container {
+            width:70%; 
+            margin: auto; 
+            max-width:800px;
+            margin-bottom: 3em;
+        }
+
+        @media screen and (max-width: 480px) {
+            .quiz_container{
+                width: 95%;
+                margin: auto; 
+                max-width:800px;
+                margin-bottom: 3em;
+            }
+        }
     </style>
 
 
@@ -60,7 +75,7 @@
 	</div>
     
 
-	<div style='width:70%; margin: auto; max-width:700px; margin-bottom: 3em;' id="quiz"></div>
+	<div class="quiz_container" id="quiz"></div>
 	<div id="ris"></div>
 	
 	<script>

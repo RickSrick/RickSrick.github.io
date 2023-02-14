@@ -29,6 +29,22 @@
             max-width: 100%; 
             height: auto;
         }
+        .quiz_container {
+            width:70%; 
+            margin: auto; 
+            max-width:800px;
+            margin-bottom: 3em;
+        }
+
+        @media screen and (max-width: 516px) {
+            .quiz_container{
+                width: 95%;
+                margin: auto; 
+                max-width:800px;
+                margin-bottom: 3em;
+            }
+        }
+
     </style>
 
 	<div class="container" style="margin-top: 1em">
@@ -49,7 +65,7 @@
 	</div>
 
 	<h3 style="text-align:center; margin-top:2em">Quiz Basi di Dati</h3>
-	<div style='width:70%; margin: auto; max-width:800px; margin-bottom: 3em;' id="quiz"></div>
+	<div class='quiz_container' id="quiz"></div>
 	<div id="ris"></div>
 	<div style="text-align:center; margin-bottom:2em">
 		<button type='button' id='submit' class='btn btn-primary' onclick="check()">Controllo</button>
