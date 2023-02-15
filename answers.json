@@ -540,7 +540,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Nella figura seguente<img src='img/8.png' class='responsive-img' alt='Immagine 8.png'> <br> è rappresentato:",
+		"question": "Nella figura seguente<br><img src='img/8.png' class='responsive-img' alt='Immagine 8.png'> <br> è rappresentato:",
 		"answers": {
 			"a": "Uno schema Entità-Associazione",
 			"b": "Uno schema relazionale",
@@ -826,7 +826,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Dal punto di vista solamente sintattico il seguente schema ER:<br><br><img src=\"img/14.png\" class=\"responsive-img\"></font>",
+		"question": "Dal punto di vista solamente sintattico il seguente schema ER:<br><br><img src=\"img/7.png\" class=\"responsive-img\"></font>",
 		"answers": {
 			"a": "È sicuramente corretto.",
 			"b": "È sicuramente errato.",
@@ -1231,5 +1231,38 @@
 		},
 		"correctAnswer": "b",
 		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Sia R(<u>A</u>, B, C), a quale formula di algebra relazionale corrisponde il comando SQL <br/> <pre style='text-align:left'>SELECT B,C<br/>FROM R<br/>WHERE A = 1</pre> ",
+		"answers": {
+			"a": "$\\sigma_{A = 1}(\\Pi_{B,C}(R))$.",
+			"b": "$\\Pi_{B,C}(\\sigma_{A = 1}(R))$.",
+			"c": "$\\rho_{B,C}(\\sigma_{A = 1}(R))$.",
+			"d": "Nessuna delle precedenti."
+		},
+		"correctAnswer": "b",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Quanto spesso cambia uno schema in una base di dati?",
+		"answers": {
+			"a": "Molto più frequentemente delle sue istanze.",
+			"b": "Di frequenza pari alle sue istanze.",
+			"c": "Molto meno frequentemente delle sue istanze.",
+			"d": "Non può cambiare mai."
+		},
+		"correctAnswer": "c",
+		"category": "Teoria"
+	},
+	{
+		"question": "Dato lo schema ER in figura <br><img class='responsive-img' src='img/23.png'><br> viene creata la seguente tabella dei volumi <br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Nome</th><th>Tipo</th><th>Volume</th></tr><tr><td>DIPENDENTE</td><td>E</td><td>100</td></tr><tr><td>PROGETTO</td><td>E</td><td>10</td></tr><tr><td>R1</td><td>R</td><td>X</td></tr></tbody></table></div> Se sappiamo che in media ogni dipendente partecipa a 5 progetti, che valore assume X affinché la tabella dei volumi risulti corretta?",
+		"answers": {
+			"a": "$5 * 100 = 500$.",
+			"b": "$5 * 10 = 50$.",
+			"c": "$5$.",
+			"d": "Non è possibile determinare un valore corretto."
+		},
+		"correctAnswer": "a",
+		"category": "Tabelle Volumi"
 	}
 ]
