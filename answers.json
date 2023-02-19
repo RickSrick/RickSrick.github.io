@@ -1171,7 +1171,7 @@
 		"answers": {
 			"a": "Arricchire e completare lo schema ER in base ai nuovi requisiti via via raccolti.",
 			"b": "Rendere più leggibile e ordinato lo schema ER.",
-			"c": "Ottnere una versione migliorata dello schema ER, dopo averlo discusso con gli utenti.",
+			"c": "Ottenere una versione migliorata dello schema ER, dopo averlo discusso con gli utenti.",
 			"d": "Rendere possibile la traduzione dello schema ER e ottimizzare il progetto."
 		},
 		"correctAnswer": "d",
