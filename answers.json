@@ -212,7 +212,7 @@
 		"question": "L'istruzione di SQL standard <pre style='text-align:left'> SELECT * FROM PERSONA_1<br> UNION<br> SELECT * FROM PERSONA_2;</pre> applicata alle tabelle<br>PERSONA_1<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table></div>PERSONA_2<br> <div class='table-responsive'><table class='table table-bordered'> <tbody> <tr> <th>Nome</th> <th>Cognome</th> </tr> <tr> <td>Aldo</td> <td>Bianchi</td> </tr> </tbody> </table></div> restituisce una tabella con:",
 		"answers": {
 			"a": "0 righe.",
-			"b": "1 righe.",
+			"b": "1 riga.",
 			"c": "2 righe.",
 			"d": "3 righe."
 		},
@@ -1068,7 +1068,7 @@
 		"category": "Tabelle Volumi"
 	},
 	{
-		"question": "Sia dato il seguente schema ER. Se l'attributo A2 è opzionale multivalore, allora:",
+		"question": "Se l'attributo A2 è opzionale multivalore, allora:",
 		"answers": {
 			"a": "XY = (0,1).",
 			"b": "XY = (0,n).",

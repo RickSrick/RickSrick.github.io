@@ -20,7 +20,7 @@
 	</script>
 </head>
 
-<body id="topbar">
+<body>
 
     <style>
         .table-edit {
@@ -48,7 +48,7 @@
     </style>
 
 	<div class="container" style="margin-top: 1em;">
-		<ul class="nav nav-tabs justify-content-center">
+		<ul class="nav nav-pills nav-justified">
 			<li class="nav-item">
 			<a class="nav-link active" href="index.html">Quiz</a>
 			</li>
@@ -58,9 +58,6 @@
 			<li class="nav-item">
 				<a class="nav-link" href="listAnswers.html">Tutte le Risposte</a>
 			</li>
-			<li class="nav-item">
-			<a class="nav-link disabled" href="#">...</a>
-			</li>
 		</ul>
 	</div>
 
@@ -69,29 +66,36 @@
 	<div id="ris"></div>
 	<div style="text-align:center; padding-bottom:2em">
 		<button type='button' id='submit' class='btn btn-primary' onclick="check()">Controllo</button>
-		<a href="#topbar"><button style="display:none" type='button' id='refresh' class='btn btn-primary' onclick="window.location.reload()">Nuovo quiz</button></a>
-		<button class="btn btn-primary" id="btn-back-to-top" style="text-align:center;position: fixed;bottom: 20px;right: 20px;display: none;">
-			<i class="fa fa-arrow-up" style="font-size:20px;color:white"></i>
+		<button style='display: none;' type='button' id='refresh' class='btn btn-primary'>Nuovo quiz</button>
+		<button class="btn btn-primary" id="btn-back-to-top" style="width:30px; height:30px;text-align:center;position: fixed;bottom: 20px;right: 20px;display: none;border-radius: 50%;padding: 0!important;text-align: center;">
+			<i class="fa fa-arrow-up" style="font-size:17px;color:white;"></i>
 		</button>
 	</div>
 	
 	<script>
-		let mybutton = document.getElementById("btn-back-to-top")
+		let goTop = document.getElementById("btn-back-to-top")
+		let refresh = document.getElementById("refresh")
 
 		window.onscroll = function () {
 			if (
 				document.body.scrollTop > 20 ||
 				document.documentElement.scrollTop > 20
 			) {
-				mybutton.style.display = "block";
+				goTop.style.display = "block";
 			} else {
-				mybutton.style.display = "none";
+				goTop.style.display = "none";
 			}
 		}
 
-		mybutton.addEventListener("click",()=> {
+		refresh.addEventListener("click",()=>{
+			document.body.scrollTop = 0
+			document.documentElement.scrollTop = 0
+			setTimeout(() => { window.location.reload()}, 1000)
+		})
+
+		goTop.addEventListener("click",()=> {
 			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
+			document.documentElement.scrollTop = 0
 		})
 
 		const numQuest=20
@@ -104,8 +108,22 @@
 
 		fetch("answers.json").then(res=>res.json()).then(data=>{
 
+			let done = JSON.parse(sessionStorage.getItem('done'))
+			if(done!=null){
+				if(done.length>=80){sessionStorage.clear()}
+			}
+			done = JSON.parse(sessionStorage.getItem('done'))
+			
 			while(auxSet.size<numQuest){
-				auxSet.add(Math.floor(Math.random() * data.length))}
+				if(done!=null){
+					let rand = Math.floor(Math.random() * data.length)
+					if(done.indexOf(rand)==-1){
+						auxSet.add(rand)
+					}
+				}else{
+					auxSet.add(Math.floor(Math.random() * data.length))
+				}
+			}
 
 			let n=0
 			
@@ -115,7 +133,7 @@
 				let random_quest=[]
 				Object.keys(element.answers).forEach(e=>{
 						random_quest.push("<div class='form-check'>"+
-									"<input class='form-check-input' type='radio' name='"+i+"'value='"+e+"'>"+
+									"<input class='form-check-input' type='radio' name='"+i+"' value='"+e+"'>"+
 									"<label class='form-check-label' id='"+(i+e)+"'>"+element.answers[e]+"</label>"+
 								"</div>")
 					})
@@ -135,11 +153,16 @@
 		})
 
 		function check(){
+			if(sessionStorage.getItem('done')==null){
+				sessionStorage.setItem('done',JSON.stringify([]))
+			}
+			let done = JSON.parse(sessionStorage.getItem('done'))
 			let count=0
 			fetch("answers.json").then(res=>res.json()).then(data=>{
 				auxSet.forEach(i=>{
 				if(document.querySelector("input[name='"+i+"']:checked")==null){}
 				else if(document.querySelector("input[name='"+i+"']:checked").value==data[i].correctAnswer){
+						done.push(i)
 						count++
 					}
 				else{
@@ -157,6 +180,7 @@
 				document.getElementById("ris").innerHTML="<h3 style='text-align:center; margin-top:2em'>Risultato: "+count+"/"+numQuest+" "+ris+"</h3>"
 				document.getElementById("submit").disabled=true
 				document.getElementById("refresh").style["display"]="inline-block"
+				sessionStorage.setItem('done',JSON.stringify(done))
 			})	
 		}
 	</script>
