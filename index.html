@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Quiz Basi </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/x-mathjax-config">
+	<script rel="preload" as="script" type="text/x-mathjax-config">
 		MathJax.Hub.Config({
 			tex2jax: {
 			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -15,7 +15,7 @@
 			}
 		});
 	</script>
-	<script type="text/javascript"
+	<script rel="preload" as="script" type="text/javascript"
 			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 	</script>
 </head>
@@ -67,7 +67,7 @@
 	<h3 style="text-align:center; margin-top:2em">Quiz Basi di Dati</h3>
 	<div class='quiz_container' id="quiz"></div>
 	<div id="ris"></div>
-	<div style="text-align:center; margin-bottom:2em">
+	<div style="text-align:center; padding-bottom:2em">
 		<button type='button' id='submit' class='btn btn-primary' onclick="check()">Controllo</button>
 		<a href="#topbar"><button style="display:none" type='button' id='refresh' class='btn btn-primary' onclick="window.location.reload()">Nuovo quiz</button></a>
 		<button class="btn btn-primary" id="btn-back-to-top" style="text-align:center;position: fixed;bottom: 20px;right: 20px;display: none;">
@@ -161,7 +161,7 @@
 		}
 	</script>
 
-    <footer class="py-3 my-4">
+    <footer class="py-3">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         </ul>
         <p class="text-center text-muted">© 2023 Bisca e Rick</p>
