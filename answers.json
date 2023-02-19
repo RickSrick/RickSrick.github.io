@@ -55,7 +55,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Sia dato lo schema di base di dati relazionale:<br/><br/><img src=\"img/1.png\"class=\"responsive-img\" alt=\"responsive-img\"></img><br/><br/> Quali delle seguenti operazioni hanno le potenzialità di violare il vincolo di integrità referenziale?",
+		"question": "Sia dato lo schema di base di dati relazionale:<br/><br/><img src=\"img/1.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img><br/><br/> Quali delle seguenti operazioni hanno le potenzialità di violare il vincolo di integrità referenziale?",
 		"answers": {
 			"a": "Sia la cancellazione di una tupla di S che la cancellazione di una tupla di R.",
 			"b": "Solo la cancellazione di una tupla di S.",
@@ -132,7 +132,7 @@
 		"category": "Teoria"
 	},
 	{
-		"question": "Si consideri lo schema ER della figura seguente:<br><br><img src='img/2.png' style='max-width: 100%; height: auto;' alt='Immagine 2.png'/></br>Il fatto che non siano specificate le cardinalità degli attributi A1 e A2 sta ad indicare che:",
+		"question": "Si consideri lo schema ER della figura seguente:<br><br><img src='img/2.webp' style='max-width: 100%; height: auto;' alt='Immagine 2.webp'/></br>Il fatto che non siano specificate le cardinalità degli attributi A1 e A2 sta ad indicare che:",
 		"answers": {
 			"a": "I due attributi possono avere cardinalità qualsiasi.",
 			"b": "A1 ha cardinalità implicita (1,1), A2 può avere cardinalità (0,1) oppure (1,1).",
@@ -143,7 +143,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Dal solo punto di vista sintattico, ossia del corretto uso formale dei costrutti del modello ER, lo schema ER della figura seguente:<br><img src='img/3.png' class='responsive-img' alt='Immagine 3.png'>",
+		"question": "Dal solo punto di vista sintattico, ossia del corretto uso formale dei costrutti del modello ER, lo schema ER della figura seguente:<br><img src='img/3.webp' class='responsive-img' alt='Immagine 3.webp'>",
 		"answers": {
 			"a": "Può essere corretto o errato, a seconda della realtà che si intende rappresentare.",
 			"b": "Può essere corretto o errato: non abbiamo sufficienti elementi per rispondere.",
@@ -198,7 +198,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "La migliore traduzione possibile dello schema ER ristrutturato della figura seguente<br><img src='img/4.png' style='max-width: 100%; height: auto;' alt='Immagine 4.png'><br> verso il modello logico relazionale porta agli schemi di relazione:",
+		"question": "La migliore traduzione possibile dello schema ER ristrutturato della figura seguente<br><img src='img/4.webp' style='max-width: 100%; height: auto;' alt='Immagine 4.webp'><br> verso il modello logico relazionale porta agli schemi di relazione:",
 		"answers": {
 			"a": "E1(<u>A11</u>,A12) e E2(<u>A21</u>,A22).",
 			"b": "E1(<u>A11</u>,A12,A21) e E2(<u>A21</u>,A22).",
@@ -298,7 +298,7 @@
 		"category": "Schema Relazionale"
 	},
 	{
-		"question": "Nella base di dati della figura seguente: <br><br> <img src='img/5.png' class='responsive-img' alt='Immagine 5.png'><br> <br>Il vincolo di integrità referenziale sia stato specificato con l'opzione <b>ON UPDATE CASCADE.</b> Con riferimento alla popolazione di figura, ciò implica che: ",
+		"question": "Nella base di dati della figura seguente: <br><br> <img src='img/5.webp' class='responsive-img' alt='Immagine 5.webp'><br> <br>Il vincolo di integrità referenziale sia stato specificato con l'opzione <b>ON UPDATE CASCADE.</b> Con riferimento alla popolazione di figura, ciò implica che: ",
 		"answers": {
 			"a": "Se viene modificato il valore di E, il valore di A viene posto uguale a un valore di default.",
 			"b": "Se viene modificato il valore di A, il valore di E viene posto uguale a un valore di default.",
@@ -353,7 +353,7 @@
 		"category": "Teoria"
 	},
 	{
-		"question": "Con riferimento allo schema ER della figura seguente<br> <img src='img/6.png' style='max-width: 100%; height: auto;' alt='Immagine 10.png'> <br> è possibile che vi sia più di un'occorrenza di R che associa la stessa coppia di occorrenze di E1 e E2?",
+		"question": "Con riferimento allo schema ER della figura seguente<br> <img src='img/6.webp' style='max-width: 100%; height: auto;' alt='Immagine 10.webp'> <br> è possibile che vi sia più di un'occorrenza di R che associa la stessa coppia di occorrenze di E1 e E2?",
 		"answers": {
 			"a": "Sì, purchè i valori di AR siano diversi per ciascuna di queste occorrenze di R.",
 			"b": "Sì, per un'opportuna semantica di R.",
@@ -364,7 +364,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Con riferimento allo schema ER della figura seguente<br><br> <img src='img/7.png' style='max-width: 100%; height: auto;' alt='Immagine 7.png'><br>quale delle seguenti affermazioni è<i> certamente vera</i>?",
+		"question": "Con riferimento allo schema ER della figura seguente<br><br> <img src='img/7.webp' style='max-width: 100%; height: auto;' alt='Immagine 7.webp'><br>quale delle seguenti affermazioni è<i> certamente vera</i>?",
 		"answers": {
 			"a": "Ci possono essere occorrenze di R a cui non partecipa alcuna occorrenza di E1.",
 			"b": "Ci possono essere occorrenze di E2 che partecipano a una sola occorrenza di R.",
@@ -529,7 +529,7 @@
 		"category": "Teoria"
 	},
 	{
-		"question": "<i>Dal solo punto di vista sintattico, </i>ossia del corretto uso formale dei costrutti del modello ER, lo schema ER della figura seguente: <br> <img src='img/7.png' class='responsive-img' alt='Immagine 7.png'>",
+		"question": "<i>Dal solo punto di vista sintattico, </i>ossia del corretto uso formale dei costrutti del modello ER, lo schema ER della figura seguente: <br> <img src='img/7.webp' class='responsive-img' alt='Immagine 7.webp'>",
 		"answers": {
 			"a": "Può essere corretto o errato, a seconda della semantica di E1, E2 e R.",
 			"b": "Può essere corretto o errato, a seconda della semantica di E1, E2, R e dei loro attributi.",
@@ -540,7 +540,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Nella figura seguente<br><img src='img/8.png' class='responsive-img' alt='Immagine 8.png'> <br> è rappresentato:",
+		"question": "Nella figura seguente<br><img src='img/8.webp' class='responsive-img' alt='Immagine 8.webp'> <br> è rappresentato:",
 		"answers": {
 			"a": "Uno schema Entità-Associazione",
 			"b": "Uno schema relazionale",
@@ -562,7 +562,7 @@
 		"category": "Dipendenze Funzionali"
 	},
 	{
-		"question": "La migliore traduzione possibile dello schema ER ristrutturato della figura seguente<br><img src='img/10.png' style='max-width: 100%; height: auto;' alt='Immagine 10.png'><br> verso il modello logico relazionale porta agli schemi di relazione:",
+		"question": "La migliore traduzione possibile dello schema ER ristrutturato della figura seguente<br><img src='img/10.webp' style='max-width: 100%; height: auto;' alt='Immagine 10.webp'><br> verso il modello logico relazionale porta agli schemi di relazione:",
 		"answers": {
 			"a": "E1(<u>A11</u>,A21,A12) e E2 (<u>A21</u>,A22)",
 			"b": "E1(<u>A11</u>,<u>A21</u>,A12) e E2 (<u>A21</u>,A22)",
@@ -793,7 +793,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Con riferimento alla schema ER ristrutturato in figura:<br><br><img src=\"img/11.png\" class=\"responsive-img\"><br><br>Qual'è la miglior traduzione nello schema logico:",
+		"question": "Con riferimento alla schema ER ristrutturato in figura:<br><br><img src=\"img/11.webp\" class=\"responsive-img\"><br><br>Qual'è la miglior traduzione nello schema logico:",
 		"answers": {
 			"a": "Uno schema di relazione.",
 			"b": "Due schemi di relazione.",
@@ -804,7 +804,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Con riferimento allo schema ristrutturato in figura<br><br><img src=\"img/12.png\" class=\"responsive-img\"><br><br> sapendo che tutti gli attributi hanno dominio intero, l'implementazione proposta in SQL:<br><br> <pre style='text-align:left'>CREATE TABLE E2(<br>A21 int,<br>A22 int,<br>PRIMARY KEY(a21,A22));<br>CREATE TABLE E1(<br>A11 int PRIMARY KEY,<br>A12,<br>A21 int not null REFERENCES E2(A21) int<br>A22 int not null REFERENCES E2(A22));</pre>",
+		"question": "Con riferimento allo schema ristrutturato in figura<br><br><img src=\"img/12.webp\" class=\"responsive-img\"><br><br> sapendo che tutti gli attributi hanno dominio intero, l'implementazione proposta in SQL:<br><br> <pre style='text-align:left'>CREATE TABLE E2(<br>A21 int,<br>A22 int,<br>PRIMARY KEY(a21,A22));<br>CREATE TABLE E1(<br>A11 int PRIMARY KEY,<br>A12,<br>A21 int not null REFERENCES E2(A21) int<br>A22 int not null REFERENCES E2(A22));</pre>",
 		"answers": {
 			"a": "Corrisponde allo schema ER fornito.",
 			"b": "Non corrisponde allo schema ER fornito.",
@@ -815,7 +815,7 @@
 		"category": "SQL"
 	},
 	{
-		"question": "Da un punto di vista generale il seguente schema ER:<br><br><img src=\"img/13.png\" class=\"responsive-img\"></font>",
+		"question": "Da un punto di vista generale il seguente schema ER:<br><br><img src=\"img/13.webp\" class=\"responsive-img\"></font>",
 		"answers": {
 			"a": "È sicuramente corretto.",
 			"b": "È sicuramente errato.",
@@ -826,7 +826,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Dal punto di vista solamente sintattico il seguente schema ER:<br><br><img src=\"img/7.png\" class=\"responsive-img\"></font>",
+		"question": "Dal punto di vista solamente sintattico il seguente schema ER:<br><br><img src=\"img/7.webp\" class=\"responsive-img\"></font>",
 		"answers": {
 			"a": "È sicuramente corretto.",
 			"b": "È sicuramente errato.",
@@ -925,7 +925,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Con riferimento allo schema ER della figura seguente:<br><img src=\"img/15.png\" class=\"responsive-img\"><br>quale delle seguenti affermazioni è certamente falsa: ",
+		"question": "Con riferimento allo schema ER della figura seguente:<br><img src=\"img/15.webp\" class=\"responsive-img\"><br>quale delle seguenti affermazioni è certamente falsa: ",
 		"answers": {
 			"a": "Ci possono essere occorrenze di R a cui non partecipa alcuna occorrenza di E2.",
 			"b": "Ci possono essere occorrenze di E3 partecipano a più occorrenze di R.",
@@ -936,7 +936,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Dal punto di vista sintattico, ossia del corretto uso formale dei costruttidel modello ER, lo schema ER della figura seguente:<br><br><img src=\"img/16.png\" class=\"responsive-img\">,",
+		"question": "Dal punto di vista sintattico, ossia del corretto uso formale dei costruttidel modello ER, lo schema ER della figura seguente:<br><br><img src=\"img/16.webp\" class=\"responsive-img\">,",
 		"answers": {
 			"a": "È sicuramente corretto.",
 			"b": "È sicuramente errato.",
@@ -958,7 +958,7 @@
 		"category": "Normalizzazione"
 	},
 	{
-		"question": "Se la generalizzazione della figura seguente:<br><br><img src=\"img/17.png\" class=\"responsive-img\"><br><br>è totale esclusiva,allora:",
+		"question": "Se la generalizzazione della figura seguente:<br><br><img src=\"img/17.webp\" class=\"responsive-img\"><br><br>è totale esclusiva,allora:",
 		"answers": {
 			"a": "Ci sono occorrenze di E1 che sono occorrenze sia di E2 che di E3.",
 			"b": "Ci sono occorrenze di E1 che non sono occorrenze nè di E2 nè di E3.",
@@ -1002,7 +1002,7 @@
 		"category": "Algebra Relazionale"
 	},
 	{
-		"question": "Lo schema ER della figura seguente:<br><br><img src=\"img/18.png\" class=\"responsive-img\">",
+		"question": "Lo schema ER della figura seguente:<br><br><img src=\"img/18.webp\" class=\"responsive-img\">",
 		"answers": {
 			"a": "È sicuramente corretto.",
 			"b": "È sicuramente errato.",
@@ -1013,7 +1013,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Con riferimento allo schema ER della seguente figura:<br><br><img src=\"img/19.png\" class=\"responsive-img\"><br><br>quale delle seguenti affermazioni è certamente vera?",
+		"question": "Con riferimento allo schema ER della seguente figura:<br><br><img src=\"img/19.webp\" class=\"responsive-img\"><br><br>quale delle seguenti affermazioni è certamente vera?",
 		"answers": {
 			"a": "Ogni occorrenza di E2 deve partecipare a più occorrenze di R.",
 			"b": "Ogni occorrenza di E1 deve partecipare ad almeno un'occorrenza di R.",
@@ -1035,7 +1035,7 @@
 		"category": "SQL"
 	},
 	{
-		"question": "Con riferimento alla generalizzazione non totale della figura seguente<br><br><img src=\"img/20.png\" class=\"responsive-img\"><br><br> quale delle seguenti affermazioni è certamente vera?",
+		"question": "Con riferimento alla generalizzazione non totale della figura seguente<br><br><img src=\"img/20.webp\" class=\"responsive-img\"><br><br> quale delle seguenti affermazioni è certamente vera?",
 		"answers": {
 			"a": "Ogni occorrenza di E1 è anche occorrenza di E2.",
 			"b": "Ogni occorrenza di E1 è anche occorrenza di E3.",
@@ -1046,7 +1046,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Perchè lo schema ER della figura seguente<br><br><img src=\"img/21.png\" class=\"responsive-img\"><br>sia sintatticamente corretto deve essere: ",
+		"question": "Perchè lo schema ER della figura seguente<br><br><img src=\"img/21.webp\" class=\"responsive-img\"><br>sia sintatticamente corretto deve essere: ",
 		"answers": {
 			"a": "(X,Y)=(1,N).",
 			"b": "(X,Y)=(0,1).",
@@ -1057,7 +1057,7 @@
 		"category": "Entità-Relazione"
 	},
 	{
-		"question": "Per lo schema ER della figura seguente<br><br><img src=\"img/22.png\" class=\"responsive-img\"><br>è stata preparata la tavola dei volumi<br><div class='table-responsive'><div class='table-responsive'><table class=\"table table-bordered\"><tbody><tr><th>Concetto</th><th>Tipo</th><th>Volume</th></tr><tr><td>E1</td><td>E</td><td>10</td></tr><tr><td>E2</td><td>E</td><td>20</td></tr><tr><td>E3</td><td>E</td><td>5</td></tr><tr><td>R</td><td>R</td><td>X</td></tr></tbody></table></div></div>Quale valore deve avere X perchè la tavola dei volumi sia corretta?",
+		"question": "Per lo schema ER della figura seguente<br><br><img src=\"img/22.webp\" class=\"responsive-img\"><br>è stata preparata la tavola dei volumi<br><div class='table-responsive'><div class='table-responsive'><table class=\"table table-bordered\"><tbody><tr><th>Concetto</th><th>Tipo</th><th>Volume</th></tr><tr><td>E1</td><td>E</td><td>10</td></tr><tr><td>E2</td><td>E</td><td>20</td></tr><tr><td>E3</td><td>E</td><td>5</td></tr><tr><td>R</td><td>R</td><td>X</td></tr></tbody></table></div></div>Quale valore deve avere X perchè la tavola dei volumi sia corretta?",
 		"answers": {
 			"a": "10.",
 			"b": "20.",
@@ -1255,7 +1255,7 @@
 		"category": "Teoria"
 	},
 	{
-		"question": "Dato lo schema ER in figura <br><img class='responsive-img' src='img/23.png'><br> viene creata la seguente tabella dei volumi <br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Nome</th><th>Tipo</th><th>Volume</th></tr><tr><td>DIPENDENTE</td><td>E</td><td>100</td></tr><tr><td>PROGETTO</td><td>E</td><td>10</td></tr><tr><td>R1</td><td>R</td><td>X</td></tr></tbody></table></div> Se sappiamo che in media ogni dipendente partecipa a 5 progetti, che valore assume X affinché la tabella dei volumi risulti corretta?",
+		"question": "Dato lo schema ER in figura <br><img class='responsive-img' src='img/23.webp'><br> viene creata la seguente tabella dei volumi <br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Nome</th><th>Tipo</th><th>Volume</th></tr><tr><td>DIPENDENTE</td><td>E</td><td>100</td></tr><tr><td>PROGETTO</td><td>E</td><td>10</td></tr><tr><td>R1</td><td>R</td><td>X</td></tr></tbody></table></div> Se sappiamo che in media ogni dipendente partecipa a 5 progetti, che valore assume X affinché la tabella dei volumi risulti corretta?",
 		"answers": {
 			"a": "$5 * 100 = 500$.",
 			"b": "$5 * 10 = 50$.",
