@@ -97,10 +97,9 @@
 		quiz = document.getElementById("quiz")
 
 		fetch("answers.json").then(res=>res.json()).then(data=>{
-
 			let done = JSON.parse(sessionStorage.getItem('done'))
 			if(done!=null){
-				if(done.length>=80){sessionStorage.clear()}
+				if(done.length>=Math.floor(0.75*data.length)){sessionStorage.clear()}
 			}
 			done = JSON.parse(sessionStorage.getItem('done'))
 			
