@@ -1,0 +1,195 @@
+[
+	{
+		"question": "Un segnale vocale è digitalizzato con un filtro antialiasing a frequenza di taglio $f_0$ e con un campionatore a 10 kHz. Quale condizione su $f_0$ che assicura l’assenza di aliasing: ",
+		"answers" : {
+			"a": "$f_0 < 4 kHz$",
+			"b": "$f_0 < 10 kHz$",
+			"c": "$f_0 < 20 kHz$",
+			"d": "$f_0 > 20 kHz$"
+		},
+		"correctAnswer": "a",
+		"category": "Esercizi"
+	},
+	{
+		"question": "Un segnale audio è campionato ha un contenuto in frequenza limitato a 20 kHz. Esso viene campionato e poi e quantizzato su 2048 valori. Trovare l’affermazione corretta tra le seguenti",
+		"answers" : {
+			"a": "Per massimizzare la QoE, il segnale digitalizzato deve essere trasmesso su una connessione con un throughput non inferiore a 440 kbps a meno che il segnale non venga compresso",
+			"b": "Se il segnale è trasmesso su una connessione con un throughput di 300 kbps, il segnale ricevuto sarà affetto da aliasing",
+			"c": "Il filtro antialiasing usato in digitalizzazione deve avere una frequenza di taglio di almeno 220 kHz"
+		},
+		"correctAnswer": "a",
+		"category": "Esercizi"
+
+	},
+	{
+		"question": "Determinare la massima durata di un segnale audio che può essere digitalizzato su un supporto dati i vincoli seguenti: <ul style='text-align:left'><li> segnale campionato a 42 kHz</li> <li> due canali (stereo)</li> <li> quantizzazione a 10 bit per campione</li><li> memoria del supporto: 450 MByte</li><li> uso di un codice di correzione degli errori con tasso $R = 0.84$</li></ul>",
+		"answers" : {
+			"a": "T = 1 ora",
+			"b": "T = 1000 secondi",
+			"c": "T = 2 ore",
+			"d": "T = mezz’ora"
+		},
+		"correctAnswer": "a",
+		"category": "Esercizi"
+	},
+	{
+		"question": "Un’immagine è digitalizzata in formato YCbCr con sottocampionamento del colore. Le dimensioni sono 2000 x 3000 pixel. Ogni canale è quantizzato su 8 bit. L’immagine è trasmessa senza compressione su di una connessione con throughput di 1 Mbps. Quanto tempo impiega la trasmissione?",
+		"answers" : {
+			"a": "T = 72 secondi",
+			"b": "T = 36 secondi",
+			"c": "T = 144 secondi",
+			"d": "T = 12 secondi"
+		},
+		"correctAnswer": "a",
+		"category": "Esercizi"
+	},
+	{
+		"question": "Un’immagine è digitalizzata in formato RGB con sottocampionamento del colore. Le dimensioni sono 2000 x 3000 pixel. Ogni canale è quantizzato su 8 bit. L’immagine è trasmessa senza compressione su di una connessione con throughput di 1 Mbps. Quanto tempo impiega la trasmissione?",
+        "answers" : {
+            "a": "T = 144 secondi",
+            "b": "T = 36 secondi",
+            "c": "T = 12 secondi",
+            "d": "T = 72 secondi"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "Un video 4K (3840x2160) a 30 immagini al secondo ed in formato YCbCr sottocampionato 8 bits/campione deve essere trasmesso su di una connessione con throughput di 10 Mbps. Quale rapporto di compressione minimo bisogna utilizzare?",
+        "answers" : {
+            "a": "300",
+            "b": "200",
+            "c": "100",
+            "d": "400"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: //TODO:img <br>Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "La lunghezza media di un codice senza perdite non può essere inferiore a 1.959 bit",
+            "b": "Il codice ottimo per questa distribuzione non può essere determinato",
+            "c": "Il codice ottimo per questa distribuzione ammette due codeword di lunghezza un bit"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: //TODO:img <br>Si consideri il codice di Huffman. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "La lunghezza media del codice è di 2 bits/simbolo",
+            "b": "La lunghezza media del codice è di 1.959 bits/simbolo",
+            "c": "La lunghezza media non può essere determinata",
+			"d": "La lunghezza media del codice è di 3 bits/simbolo"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "Si consideri la tecnica di codifica JPEG per immagini fisse. Dopo DCT e quantizzazione, un blocco 8x8 è rappresentato dai seguenti coefficienti: //TODO:img<br>Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Dopo lo zig-zag scan e il run-lenght coding, la sequenza di simboli è: 20 ; (0,5); (0,12); (0,9); (0,3); (4,9); (0,8); EOB;",
+            "b": "Il blocco contiene soprattutto variazioni orizzontali",
+            "c": "Il blocco contiene soprtattutto alte frequenze",
+            "d": "Dopo lo zig-zag scan e il run-lenght coding, la sequenza di simboli è: 20 ; 5; 12; 9; 3; 0; 0; 0; 0; 9; 8; EOB"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "In un video HD (1920x1080) a 30 immagini al secondo viene effettuata la stima del movimento; la tecnica utilizzata è il Block-matching. in un primo caso, si usano blocchi di dimensione 32x32 e si trovano dei vettori che sono codificati con 2 bit/vettore; un un secondo caso si usano blocchi 16x16 ed i vettori sono codificati con 2.5 bit per vettore. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Nel primo caso, i vettori di movimento richiedono 121.5 kbps",
+            "b": "Nel secondo caso, richiedono 8100 bps",
+            "c": "Nel primo caso richiedono 4 volte più bit che nel secondo"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+	{
+        "question": "Un codificatore video usa una struttura di Gop di tipo IPPP...P con una immagine Intra e $N$ immagini P. Le immagini intra vengono codificate su $B_{intra} =400kbits$. Le immagini inter vengono codificate ognuna su $B_{inter}= \\alpha B_{intra}$. Si ha $\\alpha \\in (0,1)$. Nello specifico, supponiamo $\\alpha= {1\\over{10}}$, e $B_{intra} = 40kbits$. Il video ha una cadenza di f = 25 immagini al secondo. Dopo la compressione, il video è trasmesso su di una connessione fatta da 10 link identici, tutti con un throughput costante di 2 Mbps per la trasmissione del video. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "La latenza end-to-end osservata dal client può arrivare fino a non meno di 2 secondi",
+            "b": "Se N > 5 da un GOP all’altro il buffer del client tende a riempirsi",
+            "c": "Il minimo throughput (al variare di N) necessario per supportare la trasmissione video è 10 Mbps"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Si consideri un collegamento punto-punto con bitrate a livello PHY $R_0$. Un'applicazione genera pacchetti ad intervalli costanti di T secondi. La dimensione della PDU a livello di applicazione è L byte. I livelli inferiori aggiungono i propri header, in modo che la dimensione della PDU a livello PHY sia M byte. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Il throughput a lungo termine a livello PHY è ${8𝑀\\over{T}}$ bps",
+            "b": "Il goodput del livello APP è ${8𝑀\\over{T}}$ bps",
+            "c": "L'overhead per il livello APP è ${M\\over{L}}$"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Si consideri un collegamento di k=10 link (tutti uguali). Si supponga che ogni collegamento sia lungo x=10 km. Assumiamo che i pacchetti a livello PHY abbiano dimensione fissa L=10 kbit, che la velocità di trasmissione sia R=100 Mbit/s per tutti i collegamenti, che la velocità di propagazione sia c=2⋅10^8 m/s e che il ritardo di elaborazione sia trascurabile. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Il ritardo minimo punto-punto è 150 $\\mu s$",
+            "b": "Il ritardo minimo end-to-end è 2 secondi",
+            "c": "Il BDP è 500 kbits"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Si consideri lo stesso sistema dell’esercizio precedente, con la differenza che uno dei link ha un bitrate di 10Mbps, mentre gli altri k-1 hanno sempre R=100 Mbps. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Il ritardo minimo end-to-end è 2.4 secondi",
+            "b": "Il BDP è 500 kbits"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Si consideri un collegamento di k=10 link (tutti uguali). Si supponga che ogni collegamento sia lungo x=10 km, tranne il primo che è lungo 1000 km Assumiamo che i pacchetti a livello PHY abbiano dimensione fissa L=10 kbit, che la velocità di trasmissione sia R=100 Mbit/s per tutti i collegamenti, che la velocità di propagazione sia c=2⋅10^8 m/s e che il ritardo di elaborazione sia trascurabile. Quale delle seguenti affermazioni è esatta?",
+        "answers" : {
+            "a": "Il ritardo minimo end-to-end è 5.1 millisecondi",
+            "b": "Il BDP è 500 kbits"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Si consideri un collegamento satellitare verso una stazione di base all'equatore. Il raggio della Terra è : RE=6,4⋅10^6 m La quota dell’orbita geostazionaria (dal centro della Terra): h=42.2⋅10^6 m. La Velocità di propagazione dei segnali è: c=3⋅10^8 m/s. Il throughput del collegamento satellitare: R=100 Mbit/𝑠. Quale affermazione è esatta? Quanti bit possono essere trasmessi?",
+        "answers" : {
+            "a": "Prima di ricevere un ACKnowledgement dal ricevitore si possono trasmettere 24Mbit",
+            "b": "Il ritardo di propagazione: RTT = 0,12 s"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Una sorgente produce pacchetti di L=1000 bit e li invia su un BSC con $\\epsilon = 1 ⋅ 10^{-6}$ e bitrate 5 Mbps. Quale di queste affermazioni è vera:",
+        "answers" : {
+            "a": "Per inviare un messaggio composto da 750 pacchetti occorrono 150 ms",
+            "b": "Il tasso di errore dei pacchetti è 1%",
+            "c": "La probabilità che il messaggio venga ricevuto correttamente è: 52.8%"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    },
+    {
+        "question": "Come nell’esercizio precedente, ma ora si utilizza un codice di correzione degli errori con R=500/511. Questo codice può correggere un bit errato e può rilevare due bit. Quale di queste affermazioni è <b>falsa</b>?",
+        "answers" : {
+            "a": "Per inviare un messaggio composto da 750 pacchetti occorrono 150 ms",
+            "b": "Ricordando che la probabilità che $l$ bit siano sbagliati su $L'=511$ è $P(l)=\\binom{L'}{l}\\epsilon^{l}(1-\\epsilon)^{L'-l}$ il tasso di errore per pacchetto (cioè la probabilità che 2 o più bit siano sbagliati in un pacchetto) è = 5.2 ⋅ 10−7",
+            "c": "La probabilità che il messaggio sia ricevuto correttamente è = 99.96%"
+        },
+        "correctAnswer": "a",
+        "category": "Esercizi"
+    }
+
+
+
+
+
+
+
+
+]

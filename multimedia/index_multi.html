@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Quiz Basi </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="load-mathjax.js" async></script>
+</head>
+
+<body>
+
+    <style>
+        .table-edit {
+            border-color: #b3b3b3!important;
+        }
+        .responsive-img {
+            max-width: 100%; 
+            height: auto;
+        }
+        .quiz_container {
+            width:70%; 
+            margin: auto; 
+            max-width:800px;
+            margin-bottom: 3em;
+        }
+
+        @media screen and (max-width: 516px) {
+            .quiz_container{
+                width: 95%;
+                margin: auto; 
+                max-width:800px;
+                margin-bottom: 3em;
+            }
+        }
+    </style>
+
+	<h3 style="text-align:center; margin-top:2em">Quiz di Multimedia</h3>
+	<div class='quiz_container' id="quiz"></div>
+	<div id="ris"></div>
+	<div style="text-align:center; padding-bottom:2em">
+		<button type='button' id='submit' class='btn btn-primary' onclick="check()">Controllo</button>
+		<button style='display: none;' type='button' id='refresh' class='btn btn-primary'>Nuovo quiz</button>
+		<button class="btn btn-primary" id="btn-back-to-top" style="width:30px; height:30px;text-align:center;position: fixed;bottom: 20px;right: 20px;display: none;border-radius: 50%;padding: 0!important;text-align: center;">
+			<i class="fa fa-arrow-up" style="font-size:17px;color:white;"></i>
+		</button>
+	</div>
+	
+	<script>
+		let goTop = document.getElementById("btn-back-to-top")
+		let refresh = document.getElementById("refresh")
+
+		window.onscroll = function () {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				goTop.style.display = "block";
+			} else {
+				goTop.style.display = "none";
+			}
+		}
+
+		refresh.addEventListener("click",()=>{
+			document.body.scrollTop = 0
+			document.documentElement.scrollTop = 0
+			setTimeout(() => { window.location.reload()}, 1000)
+		})
+
+		goTop.addEventListener("click",()=> {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0
+		})
+
+		const auxSet= new Set()
+
+        const goodEmoji = ["🤩", "🤯", "🥳", "💦", "👌", "👏" ];
+        const badEmoji = ["🤔", "😐", "	🙄", "😵", "🥸", "🤡" ];
+		
+		quiz = document.getElementById("quiz")
+
+		let numQuest=0
+		fetch("answers_multi.json").then(res=>res.json()).then(data=>{
+			numQuest=data.length
+			
+			while(auxSet.size<numQuest){
+				auxSet.add(Math.floor(Math.random() * data.length))
+			}
+
+			let n=0
+			
+			auxSet.forEach(i=>{
+				n++
+				let element=data[i]
+				let random_quest=[]
+				Object.keys(element.answers).forEach(e=>{
+						random_quest.push("<div class='form-check'>"+
+									"<input class='form-check-input' type='radio' name='"+i+"' value='"+e+"'>"+
+									"<label class='form-check-label' id='"+(i+e)+"'>"+element.answers[e]+"</label>"+
+								"</div>")
+					})
+				random_quest=random_quest.sort((a, b) => 0.5 - Math.random())
+				let radios=random_quest.join("");
+				
+
+			
+				quiz.innerHTML+="<div class='card text-center shadow-sm' style='margin-top:2em'>"+
+						"<div class='card-header'>Domanda "+n+"</div>"+
+						"<div class='card-body'>"+
+							"<h6 class='card-title' style='margin-bottom: 1.8em; line-height:2em'>"+element.question+"</h6>"+
+								"<div class='card-text' style='text-align:left'>"+radios+"</div>"+
+						"</div>"+	
+						"<div class='card-footer text-muted'>Categoria: "+element.category+"</div>"
+			})
+		})
+
+		function check(){
+			if(sessionStorage.getItem('done')==null){
+				sessionStorage.setItem('done',JSON.stringify([]))
+			}
+			let done = JSON.parse(sessionStorage.getItem('done'))
+			let count=0
+			fetch("answers_multi.json").then(res=>res.json()).then(data=>{
+				auxSet.forEach(i=>{
+				if(document.querySelector("input[name='"+i+"']:checked")==null){}
+				else if(document.querySelector("input[name='"+i+"']:checked").value==data[i].correctAnswer){
+						count++
+					}
+				else{
+					let value=document.querySelector("input[name='"+i+"']:checked").value
+					document.getElementById(i+value).innerHTML+="<tab> &#10060"
+				}
+				let radio=document.getElementById(i+data[i].correctAnswer)
+				radio.innerHTML+="<tab> &#9989"
+				radio.classList.add("alert")
+				radio.classList.add("alert-success")
+				})
+				let ris=""
+				if(count>(0.8*numQuest)){ris=goodEmoji[Math.floor(Math.random() * goodEmoji.length)]}
+				else{ris=badEmoji[Math.floor(Math.random() * badEmoji.length)]}
+				document.getElementById("ris").innerHTML="<h3 style='text-align:center; margin-top:2em'>Risultato: "+count+"/"+numQuest+" "+ris+"</h3>"
+				document.getElementById("submit").disabled=true
+				document.getElementById("refresh").style["display"]="inline-block"
+				sessionStorage.setItem('done',JSON.stringify(done))
+			})	
+		}
+	</script>
+
+    <footer class="py-3">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        </ul>
+        <p class="text-center text-muted">© 2023 Bisca e Rick</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
