@@ -66,7 +66,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img src=\"multimedia/1.png\"></img> <br>Quale delle seguenti affermazioni è esatta?",
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img style=\"width:100%;height:auto\" src=\"multimedia/1.png\"></img> <br>Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "La lunghezza media di un codice senza perdite non può essere inferiore a 1.959 bit",
             "b": "Il codice ottimo per questa distribuzione non può essere determinato",
@@ -76,7 +76,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img src=\"multimedia/1.png\"></img> <br>Si consideri il codice di Huffman. Quale delle seguenti affermazioni è esatta?",
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img style=\"width:100%;height:auto\" src=\"multimedia/1.png\"></img> <br>Si consideri il codice di Huffman. Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "La lunghezza media del codice è di 2 bits/simbolo",
             "b": "La lunghezza media del codice è di 1.959 bits/simbolo",
@@ -87,7 +87,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Si consideri la tecnica di codifica JPEG per immagini fisse. Dopo DCT e quantizzazione, un blocco 8x8 è rappresentato dai seguenti coefficienti: <img src=\"multimedia/2.png\"></img><br>Quale delle seguenti affermazioni è esatta?",
+        "question": "Si consideri la tecnica di codifica JPEG per immagini fisse. Dopo DCT e quantizzazione, un blocco 8x8 è rappresentato dai seguenti coefficienti: <img style=\"width:100%;height:auto\" src=\"multimedia/2.png\"></img><br>Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "Dopo lo zig-zag scan e il run-lenght coding, la sequenza di simboli è: 20 ; (0,5); (0,12); (0,9); (0,3); (4,9); (0,8); EOB;",
             "b": "Il blocco contiene soprattutto variazioni orizzontali",
