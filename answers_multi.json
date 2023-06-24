@@ -66,7 +66,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: //TODO:img <br>Quale delle seguenti affermazioni è esatta?",
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img src='multimedia/1.png'></img> <br>Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "La lunghezza media di un codice senza perdite non può essere inferiore a 1.959 bit",
             "b": "Il codice ottimo per questa distribuzione non può essere determinato",
@@ -76,7 +76,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: //TODO:img <br>Si consideri il codice di Huffman. Quale delle seguenti affermazioni è esatta?",
+        "question": "Consideriamo i codici a prefisso per una sorgente aleatori che emette simboli secondo la probabilità seguente: <img src='multimedia/1.png'></img> <br>Si consideri il codice di Huffman. Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "La lunghezza media del codice è di 2 bits/simbolo",
             "b": "La lunghezza media del codice è di 1.959 bits/simbolo",
@@ -87,7 +87,7 @@
         "category": "Esercizi"
     },
 	{
-        "question": "Si consideri la tecnica di codifica JPEG per immagini fisse. Dopo DCT e quantizzazione, un blocco 8x8 è rappresentato dai seguenti coefficienti: //TODO:img<br>Quale delle seguenti affermazioni è esatta?",
+        "question": "Si consideri la tecnica di codifica JPEG per immagini fisse. Dopo DCT e quantizzazione, un blocco 8x8 è rappresentato dai seguenti coefficienti: <img src='multimedia/2.png'></img><br>Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "Dopo lo zig-zag scan e il run-lenght coding, la sequenza di simboli è: 20 ; (0,5); (0,12); (0,9); (0,3); (4,9); (0,8); EOB;",
             "b": "Il blocco contiene soprattutto variazioni orizzontali",
@@ -138,7 +138,7 @@
         "category": "Esercizi"
     },
     {
-        "question": "Si consideri lo stesso sistema dell’esercizio precedente, con la differenza che uno dei link ha un bitrate di 10Mbps, mentre gli altri k-1 hanno sempre R=100 Mbps. Quale delle seguenti affermazioni è esatta?",
+        "question": "Si consideri un collegamento di k=10 link (tutti uguali). Si supponga che ogni collegamento sia lungo x=10 km. Assumiamo che i pacchetti a livello PHY abbiano dimensione fissa L=10 kbit, che la velocità di trasmissione sia 10Mbps in uno dei link, mentre gli altri k-1 hanno sempre R=100 Mbps, che la velocità di propagazione sia c=2⋅10^8 m/s e che il ritardo di elaborazione sia trascurabile. Quale delle seguenti affermazioni è esatta?",
         "answers" : {
             "a": "Il ritardo minimo end-to-end è 2.4 secondi",
             "b": "Il BDP è 500 kbits"
@@ -147,9 +147,9 @@
         "category": "Esercizi"
     },
     {
-        "question": "Si consideri un collegamento di k=10 link (tutti uguali). Si supponga che ogni collegamento sia lungo x=10 km, tranne il primo che è lungo 1000 km Assumiamo che i pacchetti a livello PHY abbiano dimensione fissa L=10 kbit, che la velocità di trasmissione sia R=100 Mbit/s per tutti i collegamenti, che la velocità di propagazione sia c=2⋅10^8 m/s e che il ritardo di elaborazione sia trascurabile. Quale delle seguenti affermazioni è esatta?",
+        "question": "Si consideri un collegamento di k=10 link (tutti uguali). Si supponga che ogni collegamento sia lungo x=10 km, tranne il primo che è lungo 1000 km. Assumiamo che i pacchetti a livello PHY abbiano dimensione fissa L=10 kbit, che la velocità di trasmissione sia R=100 Mbit/s per tutti i collegamenti, che la velocità di propagazione sia c=2⋅10^8 m/s e che il ritardo di elaborazione sia trascurabile. Quale delle seguenti affermazioni è esatta?",
         "answers" : {
-            "a": "Il ritardo minimo end-to-end è 5.1 millisecondi",
+            "a": "Il ritardo minimo punto-punto è 5.1 millisecondi",
             "b": "Il BDP è 500 kbits"
         },
         "correctAnswer": "a",
@@ -175,7 +175,7 @@
         "category": "Esercizi"
     },
     {
-        "question": "Come nell’esercizio precedente, ma ora si utilizza un codice di correzione degli errori con R=500/511. Questo codice può correggere un bit errato e può rilevare due bit. Quale di queste affermazioni è <b>falsa</b>?",
+        "question": "Una sorgente produce pacchetti di L=1000 bit. Li invia su un BSC con $\\epsilon = 1 ⋅ 10^{-6}$ e bitrate 5 Mbps e si utilizza un codice di correzione degli errori con R=500/511. Questo codice può correggere un bit errato e può rilevare due bit. Quale di queste affermazioni è <b>falsa</b>?",
         "answers" : {
             "a": "Per inviare un messaggio composto da 750 pacchetti occorrono 150 ms",
             "b": "Ricordando che la probabilità che $l$ bit siano sbagliati su $L'=511$ è $P(l)=\\binom{L'}{l}\\epsilon^{l}(1-\\epsilon)^{L'-l}$ il tasso di errore per pacchetto (cioè la probabilità che 2 o più bit siano sbagliati in un pacchetto) è = 5.2 ⋅ 10−7",
@@ -183,13 +183,297 @@
         },
         "correctAnswer": "a",
         "category": "Esercizi"
+    },
+    {
+        "question": "La minima frequenza di campionamento per un segnale con banda 10 kHz è",
+        "answers" : {
+            "a": "20 kHz",
+            "b": "10 kHz",
+            "c": "5 kHz"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Un’immagine a colori è spesso rappresentata nello spazio YCbCr perché",
+        "answers" : {
+            "a": "La diversa sensibilità dell’occhio umano alle componenti CbCr permette di sottcampionare queste ultime e quindi di ottenere una rappresentazione più compatta ma visualmente equivalente al caso di spazio RGB",
+            "b": "I sensori acquisiscono nativamente le immagini nello spazio YCbCr",
+            "c": "È computazionalmente conveniente"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il minimo tasso di codifica senza perdite per un codice a prefisso",
+        "answers" : {
+            "a": "È maggiore o uguale all’entropia della sorgente",
+            "b": "È minore o uguale all’entropia della sorgente",
+            "c": "È sempre uguale ad un numero intero di bit"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La codifica aritmetica",
+        "answers" : {
+            "a": "Ha complessità lineare con la lunghezza del messaggio",
+            "b": "Ha complessità superiore alla codifica di Huffman",
+            "c": "Si può utilizzare nel caso di codifica lossy"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La trasformata coseno discreto",
+        "answers" : {
+            "a": "Applicata ad un’immagine, produce dei coefficienti che individuano la direzionalità e la rapidità delle variazioni delle immagini",
+            "b": "Non permette di sparsificare segnali come immagini e suoni",
+            "c": "Introduce sempre una perdita d’informazione che non può essere recuperata con la trasformata inversa"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "I blocchi fondamentali di JPEG sono",
+        "answers" : {
+            "a": "DCT, Quantizzazione, Zig-Zag scan, Run-lenght coding, Codifica pseudo Huffman",
+            "b": "DCT, Zig-zag scan, codifica UTF",
+            "c": "Quantizzazione, zig-zag scan",
+            "d": "Predizione spaziale, predizione temporale, trasformata lineare"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Un’immagine codificata in JPEG",
+        "answers" : {
+            "a": "È più compatta di un’immagine non compressa, ma anche più sensibile agli errori",
+            "b": "È molto robusta rispetto agli errori su bit"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Un codificatore video si compone di:",
+        "answers" : {
+            "a": "Blocco di codifica spaziale (simile a JPEG), decodifica, predizione temporale basata su stima del movimento, codifica lossless",
+            "b": "Predizione spaziale e quantizzazione",
+            "c": "Stima del movimento e quantizzazione",
+            "d": "Stima del movimento e DCT"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il principio della stima del movimento per block matching è:",
+        "answers" : {
+            "a": "Trovare blocchi corrispondenti in due immagini, ed interpretarne la distanza come uno spostamento (movimento)",
+            "b": "Trovare feature corrispondenti in due immagini",
+            "c": "Stimare globalmente il movimento della telecamera da un’immagine all’altra"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": ". La regolarizzazione nella stima del movimento",
+        "answers" : {
+            "a": "Peggiora l’errore di predizione ma migliora il costo di codifica dei vettori di movimento",
+            "b": "Produce dei vettori di movimento con entropia molto grande",
+            "c": "Produce dei vettori di movimento con ampiezza grande",
+            "d": "Tende a produrre dei vettori di movimento molto piccoli"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": " Il throughput di una connessione a livello applicazione",
+        "answers" : {
+            "a": "È sempre minore del bit-rate a livello fisico",
+            "b": "È sempre almeno uguale al bit-rate al livello fisico",
+            "c": "È sempre costante nel tempo per un dato link"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il throughput istantaneo",
+        "answers" : {
+            "a": "È la derivata della quantità di bit ricevuti al tempo t",
+            "b": "È il numero medio di bit per secondo ricevuti in un intervallo di tempo molto lungo",
+            "c": "È il numero di bit ricevuti per unità di tempo a livello fisico"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La PDU a livello n",
+        "answers" : {
+            "a": "È formata da SDU e PCI di livello n",
+            "b": "È formata da SDU e PCI di livello n-1",
+            "c": "È formata da SDU e PCI di livello n+1"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La SDU a livello n",
+        "answers" : {
+            "a": "È la PDU a livello n+1",
+            "b": "È la PDU a livello n",
+            "c": "È la PDU a livello n-1"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "L’efficienza (in termini di throughput) a livello n è",
+        "answers" : {
+            "a": "$\\eta=|SDU_n|/(|PCI|_n+|SDU_n)$",
+            "b": "$\\eta=\\frac{|PDU_n|}{|SDU_n|}$"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Per migliorare l’efficienza",
+        "answers" : {
+            "a": "Bisogna avere SDU grandi e header piccoli",
+            "b": "Bisogna avere SDU grandi e header grand",
+            "c": "Bisogna avere SDU picolle e heade piccoli"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Le componenti del ritardo point-to-point sono",
+        "answers" : {
+            "a": "Processing, accodamento, trasmissione e propagazione",
+            "b": "Processing, accodamento e propagazione",
+            "c": "Processing e trasmissione",
+            "d": "Trasmissione e ricezione"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il jitter è",
+        "answers" : {
+            "a": "La varianza del ritardo end-to-end",
+            "b": "La media del ritardo end-to-end",
+            "c": "La deviazione standard del ritardo end-to-end"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il BDP è",
+        "answers" : {
+            "a": "Il numero di bit “in viaggio”(cioè trasmessi ma non ancora ricevuti) mentre si attende l’ack del primo pacchetto trasmesso",
+            "b": "Il numero di pacchetti che vengono trasmessi contemporaneamente",
+            "c": "Il numero di pacchetti in coda ad un router"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": " In un BSC",
+        "answers" : {
+            "a": "La probabilità che un bit sia errato è la stessa sia se si trasmette 0, sia se si trasmette 1",
+            "b": "La probabilità d’errore cambia nel tempo",
+            "c": "La probabiltà di errore è approssimata a zero"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La probabilità d’errore su un pacchetto di L bit inviata su un BSC con probabilità d’errore $\\epsilon$ è",
+        "answers" : {
+            "a": "PER = $1−(1−\\epsilon)^L$",
+            "b": "PER = $(1−\\epsilon)^L$",
+            "c": "PER = $\\epsilon$",
+            "d": "PER = $L\\epsilon$"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "I codici a controllo di parità",
+        "answers" : {
+            "a": " Permettono di rilevare ed evenutalmente correggere errori",
+            "b": "Permettono solo di correggere errori"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il bit-rate R = k/n in un codice di canale",
+        "answers" : {
+            "a": "Controlla il compromesso tra overhead e capacità di rilevamento e correzione d’errori",
+            "b": "Controlla il compromesso tra complessità e effiicacia del codice",
+            "c": "Scelto adeguatamente, permette di far fronte a raffiche (burst) d’errori"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "I burst d’errori di controllano",
+        "answers" : {
+            "a": "Con l’interleaving",
+            "b": "Con codici convoluzionali",
+            "c": "Con codici a bit-rate molto alto"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "La misura soggettiva di qualità",
+        "answers" : {
+            "a": "Si basa sul calcolo di un MOS",
+            "b": "È un modo semplice, veloce ed economico di valutare la qualità di un’immagine",
+            "c": "È basata su tecniche di machine learning"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Il PSNR",
+        "answers" : {
+            "a": "È una misura di qualità oggettiva di facile calcolo ed interpretazione",
+            "b": "Permette sempre di ordinare delle immagini per qualità crescente nello stesso modo di una persona",
+            "c": "È caratterizzato da un’elevatissima complessità computazionale"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Nello streaming video",
+        "answers" : {
+            "a": "Bisogna assicurare che il tasso di codifica non superi sempre il throughput della connessione",
+            "b": "La strategia di scartare dei pacchetti video a caso (packet dropping) quando $R_C > S$ da in genere un’ottima qualità d’esperienza",
+            "c": "È impossibile evitare che ci sia rebuffering, nemmeno senza vincoli sul buffering iniziale"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Nello streaming video adattativo",
+        "answers" : {
+            "a": "Un video è suddiviso in segmenti di uguale lunghezza e qualità diverse",
+            "b": "Un video è suddiviso in segmenti tutti della stessa qualità",
+            "c": "Non c’è ridondanza nei video memorizzati dal server",
+            "d": "È il server che decide la qualità dei segmenti da inviare al client"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
+    },
+    {
+        "question": "Nello streaming video",
+        "answers" : {
+            "a": " Il tempo di buffering iniziale è tipicamente più alto dei tempi di rebuffering accettabili dagli utenti",
+            "b": "Il tempo di buffering iniziale ha un impatto nullo sulla qualità d’esperienza"
+        },
+        "correctAnswer": "a",
+        "category": "Teoria"
     }
-
-
-
-
-
-
-
-
 ]
