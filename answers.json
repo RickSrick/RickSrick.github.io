@@ -1264,5 +1264,225 @@
 		},
 		"correctAnswer": "a",
 		"category": "Tabelle Volumi"
+	},
+	{
+		"question": "Sia $R(X)$ uno schema di relazione. Quale delle seguenti affermazioni è certamente vera? (B, 29/01/24)",
+		"answers": {
+			"a": "Una superchiave di $R$ e` sempre chiave di $R$",
+			"b": "$R$ può avere superchiavi senza avere una chiave",
+			"c": "Ci possono essere chiavi di $R$ che non sono superchiavi di $R$",
+			"d": "Chiavi e superchiavi di $R$ coincidono se $X$ è composto da un solo attributo"
+		},
+		"correctAnswer": "d",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": " Siano $r$ una relazione sullo schema $R(X)$, $Y ⊆ X$. E`sempre vero che:",
+		"answers": {
+			"a": "$|\\pi_Y (r)| < |r|$",
+			"b": "$|\\pi_Y (r)| \\leq |r|$",
+			"c": "$|\\pi_Y (r)| = |r|$",
+			"d": "$|\\pi_Y (r)| \\geq |r|$"
+		},
+		"correctAnswer": "b",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": " Quali delle seguenti attività fanno parte della (anche se non esauriscono) la ristrutturazione di uno schema ER:",
+		"answers": {
+			"a": "Analisi delle rindondanze, partizionamento o accorpamento di entità e relazioni,",
+			"b": "eliminazione delle dipendenze funzionali, eliminazione delle generalizzazioni",
+			"c": "Scelta degli identificatori primati (primary key), eliminazione delle “relationships” (i box romboidali)",
+			"d": "Eliminazione delle tuple spurie, eliminazione dei NULL"
+		},
+		"correctAnswer": "a",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "Una buona base di dati relazionale deve essere progettata seguendo il seguente criterio:",
+		"answers": {
+			"a": "Deve esistere sempre almeno una ridondanza dei dati",
+			"b": "Deve essere minimizzata la ridondanza dei dati",
+			"c": "Deve essere massimizzata la ridondanza dei dati",
+			"d": "Non deve ammettere rindondanze dei dati"
+		},
+		"correctAnswer": "b",
+		"category": "Teoria"
+	},
+	{
+		"question": "La relazione $r$ sullo schema $R(A, B, C)$ contiene una tupla $t = < a, b, NULL >$. Quale delle seguenti affermazioni possiamo fare con certezza?",
+		"answers": {
+			"a": "Non esiste un valore per l’attributo C nella tupla t",
+			"b": "Il valore dell’attributo C per la tupla t è fuori da dominio(C)",
+			"c": "Il valore dell’attributo C per la tupla t non è noto oppure è fuori da dominio(C)",
+			"d": "Il valore dell’attributo C per la tupla t non esiste oppure non è noto"
+		},
+		"correctAnswer": "d",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "Sia R(X) uno schema di relazione e r una sua generica istanza. È possibile che r presenti tuple duplicate?",
+		"answers": {
+			"a": "Sì",
+			"b": "No",
+			"c": "Sì, se X non costituisce superchiave di R.",
+			"d": "Sì, se la chiave di X contiene valori nulli"
+		},
+		"correctAnswer": "b",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "Siano r e s due relazioni sullo schema R(X). Quale di queste affermazioni NON è corretta:",
+		"answers": {
+			"a": "r e s hanno necessariamente lo stesso numero di attributi",
+			"b": "r e s hanno necessariamente la stessa chiave primaria",
+			"c": "r e s hanno necessariamente lo stesso numero di righe",
+			"d": "r e s possono contenere zero tuple"
+		},
+		"correctAnswer": "c",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Quale di questi vincoli NON è rappresentabile direttamente in un modello ER (o EER) con cardinalità (min, max), e va rappresentato a parte con regole aziendali (business rules)?",
+		"answers": {
+			"a": "Un direttore è anche un impiegato",
+			"b": "Ogni dipartimento ha necessariamente un direttore",
+			"c": "Ogni impiegato deve avere uno stipendio minore del direttore",
+			"d": "Una PMI (piccola media impresa) deve avere non più di 10 dipendenti"
+		},
+		"correctAnswer": "c",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "Sia R(A1, A2) uno schema di relazione, sia A1 chiave primaria di R e sia dominio(A1) = {a,b,c}, dominio(A2) = {1,2}. Sia r una relazione sullo schema R. Quante delle seguenti affermazioni è vera?",
+		"answers": {
+			"a": "r ha al massimo 3 tuple",
+			"b": "r ha esattamente 3 tuple",
+			"c": "r ha al massimo 6 tuple",
+			"d": "r ha al minimo 3 tuple"
+		},
+		"correctAnswer": "a",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Nel seguente esempio si rappresenta la relazione tra Dipendente e PostoAuto. Dalle sole informazioni contenute nello schema siamo in grado di dire: <br/> <img src=\"img/24.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "Tutti i dipendenti hanno un posto auto",
+			"b": "La chiave di Dipendente è composta dalla coppia IdDip e NumPosto",
+			"c": "La chiave di PostoAuto è composta da IdDip e NumPosto",
+			"d": "Un dipendente può avere al più un posto auto"
+		},
+		"correctAnswer": "c",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "Siano r una relazione sullo schema R(X). Il grado di r rappresenta:",
+		"answers": {
+			"a": "Il numero delle tuple in r",
+			"b": "Il numero degli attributi in X",
+			"c": "Il numero delle chiavi candidate dello schema R",
+			"d": "Il numero di vincoli di integrità referenziale (foreign key) dello schema R"
+		},
+		"correctAnswer": "b",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Nello schema seguente la freccia rappresenta <br/> <img src=\"img/25.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "Una dipendenza funzionale",
+			"b": "Un vincolo di chiave primaria",
+			"c": "Un vincolo sui campi che possono essere usati per operazioni di join",
+			"d": "Un vincolo di integrità referenziale"
+		},
+		"correctAnswer": "d",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "Date le relazioni r sullo schema R(X) e s sullo schema S(Y), data cond una qualsiasi condizione, quale di queste affermazioni è sempre corretta:",
+		"answers": {
+			"a": "$| r ⋈ s | < | r \\times s |$ (r x s è il prodotto cartesiano)",
+			"b": "$| r ⋈ s | < | r ⋈_{cond} s |$",
+			"c": "$|r ⋈_{cond} s | = | r |* | s |$",
+			"d": "$|r ⋈_{cond} s | ≤ | r |* | s |$"
+		},
+		"correctAnswer": "d",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Data la relazione r sullo schema R(A, B, C) e la relazione s sullo schema S(C, D), dove A, B, C, D sono tutti diversi, data cond una qualsiasi condizione, quale di queste affermazioni è sempre corretta:",
+		"answers": {
+			"a": "$r ⋈_{cond} s$ è una relazione sullo schema R(A, B, C)",
+			"b": "$r ⋈_{cond} s$ è una relazione sullo schema T(A, B, C, D)",
+			"c": "$r ⋈_{cond} s$ è una relazione sullo schema T(A, B, C, C, D)",
+			"d": "$r ⋈_{cond} s$ è una relazione sullo schema T(A, B, D)"
+		},
+		"correctAnswer": "c",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Dato lo schema di Database seguente, <br> $Impiegati(Matricola,Nome, Età, Stipendio)$ <br> $Supervisione(Impiegato, Capo)$ <br> vogliamo rappresentare in tuple relational calculus con dichiarazione di range la query “Trovare le matricole dei capi che hanno almeno un impiegato di più di 50 anni”. Una possibile formulazione è:",
+		"answers": {
+			"a": "{ s.Impiegato | i(Impiegati) , s(Supervisione) | i.Matricola=s.Impiegato ∧ i.Eta > 50 }",
+			"b": "{ s.Capo | i(Impiegati) , s(Supervisione) | i.Matricola=s.Impiegato ∧ i.Eta > 50 }",
+			"c": "{ s.Impiegato | i(Impiegati) , s(Supervisione) | i.Matricola=s.Capo ∧ i.Eta > 50 }",
+			"d": "{ s.Capo | i(Impiegati) , s(Supervisione) | i.Matricola=s.Capo ∧ i.Eta > 50 }"
+		},
+		"correctAnswer": "b",
+		"category": "Calcolo Relazionale"
+	},
+	{
+		"question": "Lo schema seguente rappresenta: <br/> <img src=\"img/26.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "Una specializzazione disjoint total",
+			"b": "Una specializzazione disjoint partial",
+			"c": "Una specializzazione overlapping total",
+			"d": "Una specializzazione overlapping partial"
+		},
+		"correctAnswer": "b",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "In quale di questi casi è sempre obbligatorio ridenominare una tabella che compare in un FROM.",
+		"answers": {
+			"a": "Quando il FROM gestisce un join interno",
+			"b": "Quando il FROM gestisce un join esterno",
+			"c": "Quando il FROM gestisce un select interno indipendente",
+			"d": "Quando il FROM gestisce un self join"
+		},
+		"correctAnswer": "d",
+		"category": "SQL"
+	},
+	{
+		"question": "È data la relazione R sullo schema S(K, A), la cui chiave primaria è composta dall’attributo K. R è composta da $n_R$ tuple. Quante righe saranno visualizzate dall’istruzione seguente? <br/> <pre style='text-align:left'>SELECT R.K<br/>FROM R<br/>GROUP BY K;</pre>",
+		"answers": {
+			"a": "Sempre 1",
+			"b": "Sempre $n_R$",
+			"c": "Un numero compreso tra 1 e $n_R$, a seconda dei valori di K",
+			"d": "Un numero compreso tra 1 e $n_R$, a seconda dei valori diA"
+		},
+		"correctAnswer": "b",
+		"category": "SQL"
+	},
+	{
+		"question": "Sia data l’istruzione: <br/> <pre style='text-align:left'>SELECT R.A<br/>FROM R<br/>WHERE R.B IN ( <br/>   SELECT S.B <br/>   FROM S <br/>);</pre>",
+		"answers": {
+			"a": "Sempre 0 oppure 1",
+			"b": "Un numero compreso tra 0 e $n_R$, a seconda dei dati",
+			"c": "Sempre $n_R$",
+			"d": "Sempre $n_S$"
+		},
+		"correctAnswer": "b",
+		"category": "SQL"
+	},
+	{
+		"question": "Quale di questi NON è un operatore insiemistico posseduto da Sql?",
+		"answers": {
+			"a": "Difference",
+			"b": "Except",
+			"c": "Intersect",
+			"d": "Union"
+		},
+		"correctAnswer": "a",
+		"category": "SQL"
 	}
 ]
