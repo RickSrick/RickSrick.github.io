@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Quiz Basi di Dati</title>
+    <title>Quiz Basi </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="load-mathjax.js" async></script>
 </head>
@@ -37,21 +37,7 @@
         }
     </style>
 
-	<div class="container" style="margin-top: 1em;">
-		<ul class="nav nav-pills nav-justified">
-			<li class="nav-item">
-			<a class="nav-link active" href="index.html">Quiz</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="listQuestions.html">Tutte le Domande</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="listAnswers.html">Tutte le Risposte</a>
-			</li>
-		</ul>
-	</div>
-
-	<h3 style="text-align:center; margin-top:2em">Quiz Basi di Dati</h3>
+	<h3 style="text-align:center; margin-top:2em">Quiz di Multimedia</h3>
 	<div class='quiz_container' id="quiz"></div>
 	<div id="ris"></div>
 	<div style="text-align:center; padding-bottom:2em">
@@ -88,7 +74,6 @@
 			document.documentElement.scrollTop = 0
 		})
 
-		const numQuest=20
 		const auxSet= new Set()
 
         const goodEmoji = ["🤩", "🤯", "🥳", "💦", "👌", "👏" ];
@@ -96,22 +81,12 @@
 		
 		quiz = document.getElementById("quiz")
 
-		fetch("answers.json").then(res=>res.json()).then(data=>{
-			let done = JSON.parse(sessionStorage.getItem('done'))
-			if(done!=null){
-				if(done.length>=Math.floor(0.75*data.length)){sessionStorage.clear()}
-			}
-			done = JSON.parse(sessionStorage.getItem('done'))
+		let numQuest=0
+		fetch("answers_multi.json").then(res=>res.json()).then(data=>{
+			numQuest=data.length
 			
 			while(auxSet.size<numQuest){
-				if(done!=null){
-					let rand = Math.floor(Math.random() * data.length)
-					if(done.indexOf(rand)==-1){
-						auxSet.add(rand)
-					}
-				}else{
-					auxSet.add(Math.floor(Math.random() * data.length))
-				}
+				auxSet.add(Math.floor(Math.random() * data.length))
 			}
 
 			let n=0
@@ -147,11 +122,10 @@
 			}
 			let done = JSON.parse(sessionStorage.getItem('done'))
 			let count=0
-			fetch("answers.json").then(res=>res.json()).then(data=>{
+			fetch("answers_multi.json").then(res=>res.json()).then(data=>{
 				auxSet.forEach(i=>{
 				if(document.querySelector("input[name='"+i+"']:checked")==null){}
 				else if(document.querySelector("input[name='"+i+"']:checked").value==data[i].correctAnswer){
-						done.push(i)
 						count++
 					}
 				else{
@@ -164,7 +138,7 @@
 				radio.classList.add("alert-success")
 				})
 				let ris=""
-				if(count>17){ris=goodEmoji[Math.floor(Math.random() * goodEmoji.length)]}
+				if(count>(0.8*numQuest)){ris=goodEmoji[Math.floor(Math.random() * goodEmoji.length)]}
 				else{ris=badEmoji[Math.floor(Math.random() * badEmoji.length)]}
 				document.getElementById("ris").innerHTML="<h3 style='text-align:center; margin-top:2em'>Risultato: "+count+"/"+numQuest+" "+ris+"</h3>"
 				document.getElementById("submit").disabled=true
