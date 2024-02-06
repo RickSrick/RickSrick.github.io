@@ -1266,7 +1266,7 @@
 		"category": "Tabelle Volumi"
 	},
 	{
-		"question": "Sia $R(X)$ uno schema di relazione. Quale delle seguenti affermazioni è certamente vera? (B, 29/01/24)",
+		"question": "Sia $R(X)$ uno schema di relazione. Quale delle seguenti affermazioni è certamente vera?",
 		"answers": {
 			"a": "Una superchiave di $R$ e` sempre chiave di $R$",
 			"b": "$R$ può avere superchiavi senza avere una chiave",
@@ -1475,7 +1475,7 @@
 		"category": "SQL"
 	},
 	{
-		"question": "Quale di questi NON è un operatore insiemistico posseduto da Sql?",
+		"question": "Quale di questi NON è un operatore insiemistico posseduto da SQL?",
 		"answers": {
 			"a": "Difference",
 			"b": "Except",
