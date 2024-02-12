@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkrick_srick=self.webpackChunkrick_srick||[]).push([[682],{5465:function(e,t,r){r.r(t),r.d(t,{Head:function(){return n}});var c=r(7294),i=(r(1883),r(8678)),u=r(9357);const n=()=>c.createElement(u.Z,{title:"About Me"});t.default=()=>c.createElement(i.Z,{pageTitle:"About Me"},c.createElement("p",null,"Hi there! I'm the proud creator of this site, which I built with Gatsby."))}}]);
-//# sourceMappingURL=component---src-pages-about-js-fa0fcab9651f6637215e.js.map
