@@ -1464,7 +1464,7 @@
 		"category": "SQL"
 	},
 	{
-		"question": "Sia data l’istruzione: <br/> <pre style='text-align:left'>SELECT R.A<br/>FROM R<br/>WHERE R.B IN ( <br/>   SELECT S.B <br/>   FROM S <br/>);</pre>",
+		"question": "Sia data l’istruzione: <br/> <pre style='text-align:left'>SELECT R.A<br/>FROM R<br/>WHERE R.B IN ( <br/>   SELECT S.B <br/>   FROM S <br/>);</pre> Siano: $n_R$, il numero di tuple di R; $n_S$, il numero di tuple di S. Quante righe saranno visualizzate dall’istruzione?",
 		"answers": {
 			"a": "Sempre 0 oppure 1",
 			"b": "Un numero compreso tra 0 e $n_R$, a seconda dei dati",
@@ -1481,6 +1481,226 @@
 			"b": "Except",
 			"c": "Intersect",
 			"d": "Union"
+		},
+		"correctAnswer": "a",
+		"category": "SQL"
+	},
+	{
+		"question": "Quando possono presentarsi violazioni dei vincoli di integrita` di una base di dati? ",
+		"answers": {
+			"a": "Solo in conseguenza di di operazioni di insert",
+			"b": "Solo in conseguenza di operazioni di query o insert",
+			"c": "Solo in conseguenza di operazioni di insert o update",
+			"d": "Solo in conseguenza di operazioni di query o update"
+		},
+		"correctAnswer": "c",
+		"category": "Teoria"
+	},
+	{
+		"question": "Sia R(X) uno schema di relazione. E` possibile che due attributi distinti di R abbiano lo stesso dominio?",
+		"answers": {
+			"a": "No",
+			"b": "Sì",
+			"c": "Sì, se entrambi appartengono alla chiave primaria",
+			"d": "Sì, se uno solo dei due appartiene alla chiave primaria"
+		},
+		"correctAnswer": "b",
+		"category": "Teoria"
+	},
+	{
+		"question": "Sia r una relazione sullo schema $R(\\underline{A}, B, C)$, e siano dominio(A) ={1, 2}, dominio(B)={x, y}, dominio(C)={i, j, k}. Quale di queste tuple può appartenere a r? ",
+		"answers": {
+			"a": "(2, i, j)",
+			"b": "(y, 2, k)",
+			"c": "(NULL, y, k)",
+			"d": "(1, NULL, j)"
+		},
+		"correctAnswer": "d",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "Siano r una relazione di grado 4 su R(X) e s una relazione di grado 8 su S(Y). X e Y possono avere intersezione non nulla. Detto g il grado di r ⋈ s, quale affermazione è corretta? ",
+		"answers": {
+			"a": "g = 12",
+			"b": "g può essere un qualsiasi valore minore uguale ad 8 ",
+			"c": "g può essere un qualsiasi valore tra 8 e 12.",
+			"d": "g = 8"
+		},
+		"correctAnswer": "c",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "Lo schema di una base di dati:",
+		"answers": {
+			"a": "Di solito varia molto piu` frequentemente di una sua istanza",
+			"b": "Di solito varia molto meno frequentemente di una sua istanza",
+			"c": "Varia soltanto in assenza di chiavi",
+			"d": "Non puo` mai variare"
+		},
+		"correctAnswer": "b",
+		"category": "Teoria"
+	},
+	{
+		"question": "Per lo schema ER della figura seguente <img src=\"img/27.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img> e` stata preparata la tavola dei volumi: <br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Concetto</th><th>Tipo</th><th>Volume</th></tr><tr><td>Carrello</td><td>E</td><td>50</td></tr><tr><td>Prodotto</td><td>E</td><td>10000</td></tr><tr><td>Composizione</td><td>R</td><td></td></tr></tbody></table></div> Sapendo che ogni carrello mediamente include 10 prodotti, quale una stima corretta del volume di “Composizione”? ",
+		"answers": {
+			"a": "10",
+			"b": "50",
+			"c": "200",
+			"d": "500"
+		},
+		"correctAnswer": "d",
+		"category": "Tabelle Volumi"
+	},
+	{
+		"question": "Per lo schema ER della figura seguente, quale delle affermazioni è sempre vera? <img src=\"img/28.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "Un impiegato ha almeno un impiego in un’azienda",
+			"b": "Un’azienda ha almeno N impiegati",
+			"c": "Un impiegato può avere impieghi in N aziende ",
+			"d": "Un’azienda ha almeno un impiegato "
+		},
+		"correctAnswer": "d",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "Si considerino i due schemi ER riportati sotto. Quale affermazione è corretta? <img src=\"img/29.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "I due schemi sono equivalenti ",
+			"b": "I due schemi non sono confrontabili perché esprimono informazioni diverse",
+			"c": "Lo schema i. può esprimere più informazioni dello schema ii",
+			"d": "Lo schema ii. può esprimere più informazioni dello schema i"
+		},
+		"correctAnswer": "b",
+		"category": "Entità-Relazione"
+	},
+	{
+		"question": "Sia data la relazione IMMOBILI <br><div class='table-responsive'><table class=\"table table-bordered\"> <tbody><tr><th>Id</th><th>Nome</th><th>Regione</th><th>Prov</th><th>N_immobili</th></tr><tr><td>12</td><td>Mario Rossi</td><td>Umbria</td><td>PG</td><td>2</td></tr><tr><td>18</td><td>Luigi Verdi</td><td>Campania</td><td>SA</td><td>3</td></tr><tr><td>10</td><td>Mario Rossi</td><td>Campania</td><td>SA</td><td>1</td></tr><tr><td>9</td><td>Mario Rossi</td><td>Campania</td><td>NA</td><td>2</td></tr></tbody></table></div> L’operazione di algebra relazionale estesa $_{Regione,Nome} F_{MAX (N_{immobili})} (IMMOBILI)$ ha come risultato una relazione con: ",
+		"answers": {
+			"a": "1 tupla",
+			"b": "2 tuple",
+			"c": "3 tuple",
+			"d": "4 tuple"
+		},
+		"correctAnswer": "c",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Siano X e Y due insiemi ordinati di attributi, R(X) e S (Y) due schemi di relazione e r e s due generiche istanze di R(X) e S (Y), rispettivamente. L’intersezione $r \\cap s$:",
+		"answers": {
+			"a": "è definita solo se |X| = |Y| e i domini degli attributi in posizione uguale in X e Y sono uguali",
+			"b": "è definita solo se i domini degli attributi con lo stesso nome in X e Y sono uguali",
+			"c": "è sempre definita",
+			"d": "è definita solo se |X|=|Y|"
+		},
+		"correctAnswer": "a",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": "I vincoli su un DB sono tipicamente specificati tramite:",
+		"answers": {
+			"a": "comandi di Data Definition Language (DDL)",
+			"b": "comandi di Data Manipulation Language (DML)",
+			"c": "comandi di DDL o DML",
+			"d": "dipende dallo specifico DBMS"
+		},
+		"correctAnswer": "a",
+		"category": "Teoria"
+	},
+	{
+		"question": " La superchiave di uno schema di relazione R(X) è definita come un insieme di attributi K ⊆ X tale che:",
+		"answers": {
+			"a": "Esiste un’istanza r sullo schema R(X) tale che per ogni coppia di tuple distinte T1 e T2 in r, si ha T1[K] ≠ T2[K]",
+			"b": "Per ogni istanza r sullo schema R(X), per ogni coppia di tuple distinte T1 e T2 in r, si ha T1[K] ≠ T2[K]",
+			"c": "Esiste un’istanza r sullo schema R(X) tale che per ogni coppia di tuple distinte T1 e T2 in r, si ha T1[K] = T2[K]",
+			"d": "Per ogni istanza r sullo schema R(X), per ogni coppia di tuple distinte T1 e T2 in r, si ha T1[K] = T2[K]"
+		},
+		"correctAnswer": "b",
+		"category": "Schema Relazionale"
+	},
+	{
+		"question": " Come si traduce in SQL un vincolo di integrità referenziale?",
+		"answers": {
+			"a": "Con un vincolo UNIQUE",
+			"b": "Con un vincolo FOREIGN KEY ",
+			"c": "Con un vincolo NOT NULL",
+			"d": "Con un vincolo PRIMARY KEY "
+		},
+		"correctAnswer": "b",
+		"category": "SQL"
+	},
+	{
+		"question": "Dato lo schema di Database seguente, $Studente(\\underline{Matricola},Nome, Età, CorsoLaurea)$, $CorsoLaurea(\\underline{CodCorso, Insegnamento}$) vogliamo rappresentare in tuple relational calculus con dichiarazione di range la query \"Trovare le matricole degli studenti che seguono l’insegmanento “DB”.\" Una possibile formulazione è ",
+		"answers": {
+			"a": "{c.Insegnamento | s(Studente) , c(CorsoLaurea) | s.CorsoLaurea=c.CodCorso $\\wedge$ c.Insegnamento=DB}",
+			"b": "{ s.Matricola | s(Studente) , c(CorsoLaurea) | s.CorsoLaurea=c.CodCorso $\\wedge$ c.Insegnamento=DB} ",
+			"c": "{c. Insegnamento | s(Studente) , c(CorsoLaurea) | s.CorsoLaurea=c.CodCorso $\\wedge$ c.Insegnamento=DB} ",
+			"d": "Nessuna delle precedenti "
+		},
+		"correctAnswer": "b",
+		"category": "Calcolo Relazionale"
+	},
+	{
+		"question": "Nella logica a 3 valori (True,False,Unknown), qual è la tabella di verità del connettore OR? <img src=\"img/30.webp\"class=\"responsive-img\" alt=\"responsive-img\"></img>",
+		"answers": {
+			"a": "a",
+			"b": "b",
+			"c": "c",
+			"d": "d"
+		},
+		"correctAnswer": "d",
+		"category": "Teoria"
+	},
+	{
+		"question": "Sia R una tabella SQL che implementa lo schema di relazione R(A;B;C). L’istruzione di SQL standard <br> SELECT B, C FROM R WHERE A=1; <br> corrisponde alla seguente espressione: ",
+		"answers": {
+			"a": "$\\sigma_{A=1} (\\pi_{B,C}(R))$",
+			"b": "$\\rho_{B,C}(\\pi_{A=1}(R))$",
+			"c": "$\\pi_{B,C}(\\sigma_{A=1}(R))$",
+			"d": "$\\rho_{B,C}(\\pi_{A=1}(R))$"
+		},
+		"correctAnswer": "b",
+		"category": "Algebra Relazionale"
+	},
+	{
+		"question": "Le clausole di un’istruzione SELECT devono essere elaborate secondo un ordine fisso. Indicate quale tra questi è l’ordine corretto.",
+		"answers": {
+			"a": "FROM, SELECT, ORDER BY, WHERE",
+			"b": "FROM, SELECT, WHERE, ORDER BY",
+			"c": "FROM, WHERE, ORDER BY, SELECT",
+			"d": "FROM, WHERE, SELECT, ORDER BY"
+		},
+		"correctAnswer": "d",
+		"category": "SQL"
+	},
+	{
+		"question": "È data la relazione R(A, B); A è chiave primaria ed è di tipo intero. Considerate l’istruzione: <br/> <pre style='text-align:left'>SELECT R.A, MAX(R.A)<br/>FROM R<br/>GROUP BY R.B;</pre> Indicate qual è l’unica frase corretta tra le seguenti:",
+		"answers": {
+			"a": "L’istruzione è sintatticamente corretta, e visualizza tante righe quante sono le tuple di R",
+			"b": "L’istruzione è sintatticamente corretta, e visualizza tante righe quanti sono i differenti valori di R.B. ",
+			"c": "L’istruzione è sintatticamente errata a causa dell’argomento MAX(R.A) nella clausola SELECT",
+			"d": "L’istruzione è sintatticamente errata a causa dell’argomento R.A nella clausola SELECT"
+		},
+		"correctAnswer": "d",
+		"category": "SQL"
+	},
+	{
+		"question": "Sono date le relazioni: R(A, B), S(C, A*), le cui chiavi primarie sono gli attributi sottolineati; inoltre c’è un vincolo di integrità referenziale da S.A a R.A; infine, l’attributo S.A è opzionale. Il programmatore/trice vuole gestire una opportuna politica di reazione quando su un valore di R.A è effettuata una modifica, in modo che il DBMS inserisca un valore opportuno nelle tuple di S.A contenenti il valore modificato di R.A. Quale di queste politiche di reazione alla modifica il programmatore NON può implementare (mediante le istruzioni viste a lezione)? ",
+		"answers": {
+			"a": "Il DBMS inserisce (in S.A) il valore modificato di RA",
+			"b": "Il DBMS inserisce (in S.A) il valore NULL",
+			"c": "Il DBMS inserisce (in S.A) un valore che corrisponde al numero di tuple di R",
+			"d": "Il DBMS inserisce (in S.A) un valore di default"
+		},
+		"correctAnswer": "c",
+		"category": "SQL"
+	},
+	{
+		"question": "Considerate l’istruzione: <br/> <pre style='text-align:left'>SELECT R.A<br/>FROM R<br/>WHERE R.B = ( <br/>   SELECT MAX(S.B) <br/>   FROM S <br/>); </pre> Siano: $n_R$, il numero di tuple di R; $n_S$, il numero di tuple di S. Quante volte sarà eseguito il select interno? ",
+		"answers": {
+			"a": "Sempre 1",
+			"b": "Un numero compreso tra 1 e $n_R$, a seconda dei dati",
+			"c": "Un numero compreso tra 1 e $n_S$, a seconda dei dati",
+			"d": "Sempre $n_R$"
 		},
 		"correctAnswer": "a",
 		"category": "SQL"
