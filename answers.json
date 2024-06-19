@@ -1658,7 +1658,7 @@
 			"c": "$\\pi_{B,C}(\\sigma_{A=1}(R))$",
 			"d": "$\\rho_{B,C}(\\pi_{A=1}(R))$"
 		},
-		"correctAnswer": "b",
+		"correctAnswer": "c",
 		"category": "Algebra Relazionale"
 	},
 	{
