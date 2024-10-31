@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me | RickSrick</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/_images/icon.webp">
+  </head>
+  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:text-[#dbd1ca]">
+
+    <script>
+      let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "");
+      document.documentElement.classList.add(theme);
+
+      function changeTheme() {
+        let inilist = document.documentElement.classList.toggle("dark") ? "dark" : "light";
+        localStorage.setItem("theme", inilist);
+      }
+    </script>
+
+    <div class="mb-5 mt-10 max-h-20">
+      <a class="no-underline" href="/index.html"> 
+        <img src="_images/icon.webp" alt="me" class="w-8 h-8 dark:invert my-1 content-center justify-self-center">
+      </a>
+
+      <div class="flex flex-row justify-center flex-wrap mt-2">
+        <a href="/index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">Home</a>
+        <a href="/about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">About</a>
+        <a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>
+        <a href="https://github.com/RickSrick" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Github</a>
+        <button type="button" class="ml-10" onclick="changeTheme()">◐</button>
+      </div>
+    </div>
+
+    <div class="flex-grow">
+      <div class="flex max-sm:flex-wrap mt-6 max-sm:mb-10">
+    <div class="flex-auto px-1">
+    <h2 class="my-1 dark:text-[#dbd1ca]">About Me 😄</h2>
+    
+        <p class="my-0 text-sm">Work on <b>Cluster Reply</b> since 19th October 2023.</p>
+    
+        <p class="my-0 text-sm">Top <b>0.005%</b> Elio e le Storie Tese fan on Spotify (2023)</p>
+    
+        <p class="my-0 text-sm">I made 3 games on on Itch.io 🎮</p>
+    
+        <p class="my-0 text-sm">Best fan of Matteo Zanella (aka Zanzibarr)</p>
+    
+
+
+    <h3 class="my-1 dark:text-[#dbd1ca]">My Interests ✏️</h3>
+    <ul>
+    
+        <li class="my-0 text-sm">Videogames</li>
+    
+        <li class="my-0 text-sm">Films</li>
+    
+        <li class="my-0 text-sm">Math (not so good)</li>
+    
+        <li class="my-0 text-sm">Reading</li>
+    
+    </ul>
+
+    <h3 class="my-1 dark:text-[#dbd1ca]">Top Films 🎥</h3>
+    <ul>
+    
+        <li class="my-0 text-sm">Indiana Jones</li>
+    
+        <li class="my-0 text-sm">Star Wars</li>
+    
+        <li class="my-0 text-sm">Baby Driver</li>
+    
+        <li class="my-0 text-sm">Blade Runner</li>
+    
+        <li class="my-0 text-sm">Lord of The Rings</li>
+    
+        <li class="my-0 text-sm">007</li>
+    
+        <li class="my-0 text-sm">Mad Heidi</li>
+    
+    </ul>
+
+    </div>
+    <div class="flex-auto px-1">
+    <h3 class="my-1 dark:text-[#dbd1ca]">My Coding Skill 💻</h3>
+    <p class="my-0 text-sm">(based on my personal opinion about it and time of use)</p>
+
+    <div class="mb-5">
+    
+        <p class="text-sm my-1">C#</p>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-[#61af65] h-2.5 rounded-full" style="width: 70%"></div>
+        </div>
+    
+        <p class="text-sm my-1">Python</p>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-[#739ace] h-2.5 rounded-full" style="width: 75%"></div>
+        </div>
+    
+        <p class="text-sm my-1">Javascript</p>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-[#ca4040] h-2.5 rounded-full" style="width: 75%"></div>
+        </div>
+    
+        <p class="text-sm my-1">Java</p>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-[#fcd495] h-2.5 rounded-full" style="width: 55%"></div>
+        </div>
+    
+        <p class="text-sm my-1">C++</p>
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-[#c76eb4] h-2.5 rounded-full" style="width: 40%"></div>
+        </div>
+    
+    </div>
+
+    <h3 class="my-1 dark:text-[#dbd1ca] ">My "Cool" video Playlist 📼</h3>
+    <div class="flex justify-center">
+        <iframe class="aspect-auto" src="https://www.youtube-nocookie.com/embed/videoseries?si=_OPEBljM32UlAcv7&amp;list=PLssCSOgBwjNpVVpyLod80upQMGY7bFzWY" title="YouTube video player" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+
+    </div>
+</div>
+    </div>
+
+    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c]">
+      Riccardo Modolo (RickSrick) 2024, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
+    </footer>
+  
+</body></html>
