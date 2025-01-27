@@ -2,9 +2,7 @@ window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    svg: {
-      fontCache: 'global'
-    }
+    svg: {}
   };
   
   (function () {
