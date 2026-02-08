@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="personal page">
     <title>Home Page | RickSrick</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/x-icon" href="./images/icon.webp">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.webp">
   </head>
-  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:text-[#dbd1ca]">
+  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:!text-[#dbd1ca] cursor-[url(./images/pointer.png),_pointer]">
 
     <script>
       let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -21,26 +21,25 @@
       }
     </script>
 
-    <div class="mb-5 mt-10 max-h-20">
+    <div class="mb-5 mt-10 max-h-20" role="navigation">
       <button class="w-full focus:outline-0" type="button" onclick="changeTheme()"> 
-        <img src="./images/icon.webp" alt="me" class="w-8 h-8 dark:invert my-1 content-center justify-self-center">
+        <img src="/images/icon.webp" alt="me" class="w-8 h-8 dark:invert mt-1 mb-1 content-center justify-self-center">
       </button>
 
       <div class="flex flex-row justify-center flex-wrap mt-2">
-        <a href="./index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">Home</a>
-        <a href="./about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">About</a>
-        <a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>
+        <a href="/index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">Home</a>
+        <a href="/about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">About</a>
+        <!--<a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>-->
         <a href="https://github.com/RickSrick" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Github</a>
       </div>
     </div>
 
-    <div class="flex-grow">
-      <div class="flex max-sm:flex-wrap-reverse justify-items-stretch flex-row my-5 items-center justify-between justify-items-center">
+    <div class="flex-grow" role="main">
+      <div class="flex max-sm:flex-wrap-reverse justify-items-stretch flex-row mt-5 mb-5 items-center justify-between justify-items-center">
     <div class="max-sm:w-full">
         <h2 class="mb-2 mt-2 text-3xl dark:text-[#dbd1ca]">Hi, I'm Rick <span id="emote"></span>,</h2>
         This is my own little web garden 🌱.<br>
         Software developer and book lover.<br>
-        I would need two lives to satisfy my curiosity<br>
         <div class="mt-2 max-sm:mt-4 flex max-sm:justify-center gap-4">
         <a href="https://ricksrick.itch.io/" class="no-underline text-[#0D0D0D] bg-[#FE6D73] font-bold px-4 rounded">
            My itch.io
@@ -50,115 +49,96 @@
         </a></div>
     </div>
     <div class="items-center max-sm:w-full">
-        <img src="./images/icon.webp" alt="me" class="w-56 h-56 dark:invert content-center justify-self-center">
+        <img src="./images/icon.webp" alt="me" class="select-none w-56 h-56 dark:invert content-center justify-self-center" style="image-rendering: pixelated;">
     </div>
 </div>
+<div class="bg-[url(images/line.png)] bg-center bg-repeat h-16 mb-3" id="plant"></div>
 
 <h1 class="text-center text-[1.25em] dark:text-[#dbd1ca] font-semibold">PROJECTS</h1>
-<div class="grid gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 my-11"> 
-     
-        <a href="https://github.com/RickSrick/A-star-search" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+<div class="grid gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 mt-5 mb-11"> 
+        <a href="https://github.com/RickSrick/A-star-search" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2021</span>
-        
         <span class="rounded-md absolute my-java-badge -top-2 -right-2 text-sm px-2 py-1">Java</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">A Star Search</h1>
         <p class="break-words dark:text-[#dbd1ca] ">8 puzzle A* search</p>
     </div>
 </a>
-     
-        <a href="https://github.com/RickSrick/ChessPlusPlus" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+        <a href="https://github.com/RickSrick/ChessPlusPlus" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2021</span>
-        
         <span class="rounded-md absolute my-cpp-badge -top-2 -right-2 text-sm px-2 py-1">C++</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">ChessPlusPlus</h1>
         <p class="break-words dark:text-[#dbd1ca] ">A chess game made in c++</p>
     </div>
 </a>
-     
-        <a href="https://github.com/RickSrick/EU-Trust-local" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+        <a href="https://github.com/RickSrick/EU-Trust-local" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2022</span>
-        
         <span class="rounded-md absolute my-java-badge -top-2 -right-2 text-sm px-2 py-1">Java</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">EU Trust local</h1>
         <p class="break-words dark:text-[#dbd1ca] ">Desktop application to check European electronic identity providers</p>
     </div>
 </a>
-     
-        <a href="https://github.com/RickSrick/RickSrick.github.io" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+        <a href="https://github.com/RickSrick/RickSrick.github.io" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2022</span>
-        
         <span class="rounded-md absolute my-html-badge -top-2 -right-2 text-sm px-2 py-1">HTML</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">ricksrick.github.io</h1>
         <p class="break-words dark:text-[#dbd1ca] ">Personal website project</p>
     </div>
 </a>
-     
-        <a href="https://github.com/RickSrick/rulelist-cancer-CORELS" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+        <a href="https://github.com/RickSrick/rulelist-cancer-CORELS" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2023</span>
-        
         <span class="rounded-md absolute my-python-badge -top-2 -right-2 text-sm px-2 py-1">Python</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">rulelist-cancer-CORELS</h1>
         <p class="break-words dark:text-[#dbd1ca] ">Using CORELS to explore the relationship between gene mutations and cancer type</p>
     </div>
 </a>
-     
-        <a href="https://github.com/RickSrick/GATTO" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 px-6 py-4 hover:scale-105">
+        <a href="https://github.com/RickSrick/GATTO" class="no-underline select-none rounded-md relative transition duration-400 shadow-md border-2 border-gray-200 px-6 py-4 hover:scale-105">
     <div class="flex justify-between mb-3">
         <span class="text-gray-500">2024</span>
-        
         <span class="rounded-md absolute my-python-badge -top-2 -right-2 text-sm px-2 py-1">Python</span>
-        
     </div>
     <div>
         <h1 class="break-words font-bold text-xl mb-2 dark:text-[#dbd1ca]">GATTO</h1>
         <p class="break-words dark:text-[#dbd1ca] ">GATTO (Graph ATtention network with TOpological information)</p>
     </div>
 </a>
-    
 </div>
+<div class="bg-[url(images/line.png)] bg-center bg-repeat h-16 mb-3" id="plant"></div>
 
 <h1 class="text-center text-[1.25em] dark:text-[#dbd1ca] font-semibold">GAMES</h1>
-<div class="grid gap-4 mt-4 sm:grid-cols-2 my-11 justify-items-center">
-     
+<div class="grid gap-4 mt-4 sm:grid-cols-2 mt-5 mb-11 justify-items-center">
         <a href="https://ricksrick.itch.io/get-my-sword" class="max-w-64 transition duration-400 hover:scale-105">
-    <img src="./images/game_cover/getmyswordcover.webp" alt="game cover" width="474" height="711" class="my-1">
+    <img src="./images/game_cover/getmyswordcover.webp" alt="game cover" width="474" height="711" class="mt-1 mb-1" style="image-rendering: pixelated;">
 </a>
-     
         <a href="https://ricksrick.itch.io/glitchgun" class="max-w-64 transition duration-400 hover:scale-105">
-    <img src="./images/game_cover/glitchguncover.webp" alt="game cover" width="474" height="711" class="my-1">
+    <img src="./images/game_cover/glitchguncover.webp" alt="game cover" width="474" height="711" class="mt-1 mb-1" style="image-rendering: pixelated;">
 </a>
-    
 </div>
 
 <script>
-const emoji = ["😎", "👑", "🎓", "📚", "🗿", "🇮🇹", "📈"];
+const emoji = ["😎", "🎓", "📚", "🇮🇹"];
 let selectedEmoji = emoji[Math.floor(Math.random() * emoji.length)];
 document.getElementById("emote").innerHTML = selectedEmoji;
 </script>
     </div>
 
-    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full">
-      Riccardo Modolo (RickSrick) 2024, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
+    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
+      Riccardo Modolo (RickSrick) 2026, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
     </footer>
   
+
 </body></html>

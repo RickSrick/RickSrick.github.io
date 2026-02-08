@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About me">
     <title>About me | RickSrick</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/x-icon" href="./images/icon.webp">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.webp">
   </head>
-  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:text-[#dbd1ca]">
+  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:!text-[#dbd1ca] cursor-[url(./images/pointer.png),_pointer]">
 
     <script>
       let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -21,103 +21,67 @@
       }
     </script>
 
-    <div class="mb-5 mt-10 max-h-20">
+    <div class="mb-5 mt-10 max-h-20" role="navigation">
       <button class="w-full focus:outline-0" type="button" onclick="changeTheme()"> 
-        <img src="./images/icon.webp" alt="me" class="w-8 h-8 dark:invert my-1 content-center justify-self-center">
+        <img src="/images/icon.webp" alt="me" class="w-8 h-8 dark:invert mt-1 mb-1 content-center justify-self-center">
       </button>
 
       <div class="flex flex-row justify-center flex-wrap mt-2">
-        <a href="./index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">Home</a>
-        <a href="./about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">About</a>
-        <a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>
+        <a href="/index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">Home</a>
+        <a href="/about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">About</a>
+        <!--<a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>-->
         <a href="https://github.com/RickSrick" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Github</a>
       </div>
     </div>
 
-    <div class="flex-grow">
-      <div class="flex max-sm:flex-wrap mt-6 max-sm:mb-10">
+    <div class="flex-grow" role="main">
+      <figure class="mt-0 mb-0">
+<img src="./images/image.jpeg" alt="">
+<figcaption class="dark:text-[#dbd1ca]">image from <a class="dark:text-[#dbd1ca]" href="https://x.com/poetengineer__/status/2019990803356217823">@poetengineer__</a></figcaption>
+</figure>
+
+<div class="flex max-sm:flex-wrap mt-6 max-sm:mb-10 mb-6">
     <div class="flex-auto px-1">
-    <h2 class="my-1 dark:text-[#dbd1ca]">About Me 😄</h2>
-    
-        <p class="my-0 text-sm">Work on <b>Cluster Reply</b> since 19th October 2023.</p>
-    
-        <p class="my-0 text-sm">Top <b>0.005%</b> Elio e le Storie Tese fan on Spotify (2023)</p>
-    
-        <p class="my-0 text-sm">top <b>0.05%</b> Frah Quintale fan on Spotify (2024)</p>
-    
-        <p class="my-0 text-sm">I made 3 games on on Itch.io 🎮</p>
-    
-        <p class="my-0 text-sm">Best fan of Matteo Zanella (aka Zanzibarr)</p>
-    
-
-
-    <h3 class="my-1 dark:text-[#dbd1ca]">My Interests ✏️</h3>
-    <ul>
-    
-        <li class="my-0 text-sm">Videogames</li>
-    
-        <li class="my-0 text-sm">Films</li>
-    
-        <li class="my-0 text-sm">Math (not so good)</li>
-    
-        <li class="my-0 text-sm">Reading</li>
-    
-    </ul>
-
-    <h3 class="my-1 dark:text-[#dbd1ca]">Top Films 🎥</h3>
-    <ul>
-    
-        <li class="my-0 text-sm">Indiana Jones</li>
-    
-        <li class="my-0 text-sm">Star Wars</li>
-    
-        <li class="my-0 text-sm">Baby Driver</li>
-    
-        <li class="my-0 text-sm">Blade Runner</li>
-    
-        <li class="my-0 text-sm">Lord of The Rings</li>
-    
-        <li class="my-0 text-sm">007</li>
-    
-        <li class="my-0 text-sm">Mad Heidi</li>
-    
-    </ul>
-
+    <h2 class="mt-1 mb-0 dark:text-[#dbd1ca] text-center">About Me</h2>
+    <p class="mb-1">My name is <b>Riccardo</b> and I currently live in <b>Padua (Italy)</b>. I'm a software engineer and currently work at <a class="dark:text-[#dbd1ca]" href="https://www.reply.com/cluster-reply-italy/it"> Cluster Reply</a>. I love films of all genres and really enjoy the creative process itself, even if the film is objectively bad. I also love video games and my dream job was to be a video game developer. Here are some facts about me:</p>
+    <div class="flex max-sm:flex-wrap items-center">
+    <div class="flex-auto px-1">
+        <p class="mt-0 mb-0">Work on <b>Cluster Reply</b> since 19th October 2023.</p>
+        <p class="mt-0 mb-0">Top <b>0.005%</b> Elio e le Storie Tese fan on Spotify (2023)</p>
+        <p class="mt-0 mb-0">Top <b>0.05%</b> Frah Quintale fan on Spotify (2024)</p>
+        <p class="mt-0 mb-0">Top <b>0.1%</b> Chopin fan on Spotify (2025)</p>
+        <p class="mt-0 mb-0">I made <b>3</b> games on on Itch.io</p>
+        <p class="mt-0 mb-0">I have two incredible friends: <b>Matteo</b> and <b>Francesco</b></p>
     </div>
     <div class="flex-auto px-1">
-    <h3 class="my-1 dark:text-[#dbd1ca]">My Coding Skill 💻</h3>
-    <p class="my-0 text-sm">(based on my personal opinion about it and time of use)</p>
-
-    <div class="mb-5">
-    
-        <p class="text-sm my-1">C#</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-[#61af65] h-2.5 rounded-full" style="width: 70%"></div>
-        </div>
-    
-        <p class="text-sm my-1">Python</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-[#739ace] h-2.5 rounded-full" style="width: 75%"></div>
-        </div>
-    
-        <p class="text-sm my-1">Javascript</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-[#ca4040] h-2.5 rounded-full" style="width: 75%"></div>
-        </div>
-    
-        <p class="text-sm my-1">Java</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-[#fcd495] h-2.5 rounded-full" style="width: 55%"></div>
-        </div>
-    
-        <p class="text-sm my-1">C++</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-[#c76eb4] h-2.5 rounded-full" style="width: 40%"></div>
-        </div>
-    
+    <img src="./images/plant.png" alt="plant" class="select-none w-46 h-46 mt-0 mb-0 content-center justify-self-center" style="image-rendering: pixelated;">
+</div>
+</div>
+    <div class="flex max-sm:flex-wrap mt-6 max-sm:mb-10 mb-6">
+    <div class="flex-auto px-1">
+    <h2 class="mt-1 mb-1 dark:text-[#dbd1ca]">My Interests</h2>
+    <ul>
+        <li class="mt-0 mb-0">Videogames</li>
+        <li class="mt-0 mb-0">Films</li>
+        <li class="mt-0 mb-0">Programming</li>
+        <li class="mt-0 mb-0">Reading</li>
+    </ul>
     </div>
-
-    <h3 class="my-1 dark:text-[#dbd1ca] ">My "Cool" video Playlist 📼</h3>
+    <div class="flex-auto px-1">
+    <h2 class="mt-1 mb-1 dark:text-[#dbd1ca]">Top Films/Sagas</h2>
+    <ul>
+        <li class="mt-0 mb-0 text-sm">Indiana Jones</li>
+        <li class="mt-0 mb-0 text-sm">Star Wars</li>
+        <li class="mt-0 mb-0 text-sm">Baby Driver</li>
+        <li class="mt-0 mb-0 text-sm">Blade Runner</li>
+        <li class="mt-0 mb-0 text-sm">Lord of The Rings</li>
+        <li class="mt-0 mb-0 text-sm">007</li>
+        <li class="mt-0 mb-0 text-sm">Mad Heidi</li>
+    </ul>
+    </div>
+    </div>
+    <h2 class="mt-1 mb-1 dark:text-[#dbd1ca]">My "Cool" video Playlist</h2>
+    <p>This is a small collection of YouTube videos that I think are worth watching.</p>
     <div class="flex justify-center">
         <iframe class="aspect-auto" src="https://www.youtube-nocookie.com/embed/videoseries?si=_OPEBljM32UlAcv7&amp;list=PLssCSOgBwjNpVVpyLod80upQMGY7bFzWY" title="YouTube video player" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
     </div>
@@ -126,8 +90,9 @@
 </div>
     </div>
 
-    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full">
-      Riccardo Modolo (RickSrick) 2024, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
+    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
+      Riccardo Modolo (RickSrick) 2026, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
     </footer>
   
+
 </body></html>
