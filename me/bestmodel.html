@@ -124,7 +124,7 @@ function rejectRequest() {
 	setTimeout(() => {
 		chat.prepend(buildchatbubble(message, 1));
 		const element = document.querySelector('.thinking');
-		//element.parentNode.removeChild(element);
+		element.parentNode.removeChild(element);
 		input_field.disabled = false;
 		button.disabled = false;
 	}, 2000);
