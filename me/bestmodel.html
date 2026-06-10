@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="best ai model">
+    <title>Best Model | RickSrick</title>
+    <link rel="preload" href="./style.css" as="style">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./images/icon.webp">
+  </head>
+  <body class="my-container prose flex flex-col h-screen dark:bg-[#242e35] dark:!text-[#dbd1ca] cursor-[url(./images/pointer.png),_pointer]" style="font-display: swap">
+
+    <script>
+      let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" 
+        : "light");
+      document.documentElement.classList.add(theme);
+
+      function changeTheme() {
+        let inilist = document.documentElement.classList.toggle("dark") ? "dark" : "light";
+        localStorage.setItem("theme", inilist);
+      }
+    </script>
+
+    <div class="mb-5 mt-10" role="navigation">
+      <button class="w-full focus:outline-0" type="button" onclick="changeTheme()"> 
+        <img src="./images/icon.webp" alt="me" class="w-8 h-8 dark:invert mt-1 mb-1 content-center justify-self-center">
+      </button>
+
+      <div class="flex flex-row justify-center flex-wrap mt-2">
+        <a href="./index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">Home</a>
+        <a href="./about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">About</a>
+        <a href="./bestmodel.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FCD495] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">My LLM</a>
+        <!--<a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>-->
+        <a href="https://github.com/RickSrick" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Github</a>
+      </div>
+    </div>
+
+      <div class="accordion">
+<details>
+<summary>Warning!</summary>
+<div class="p-2 bg-[#ffe6de] flex"><div class="p-2 w-0 max-h-40"><svg class="w-auto h-full px-2 pr-4 text-[#ffbab5]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"></path>
+  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"></path>
+</svg></div><p class="">(TBM 4.5T) is my best and most dangerous model; some of its most advanced features have been disabled for safety reasons. Please handle the model with care, as the risk of accidents is high. All computing is done locally!</p></div>
+</details>
+</div>
+<div class="flex-grow min-h-0" role="main">
+<div class="w-full relative h-full flex flex-col p-4">
+<div id="chat" class="flex-1 min-h-0 scrollbar-gutter-stable overflow-y-auto flex flex-col-reverse items-end">
+<div class="flex-1"></div>
+</div>
+<div class="w-full flex">
+<input class="disabled:opacity-50 border-2 flex-1 border-solid rounded px-2" name="chatfield" type="text" id="chatfield">
+<button id="send_btn" class="disabled:opacity-50 no-underline text-[#0D0D0D] bg-[#17C3B2] font-bold px-4 rounded ml-1" onclick="sendtomodel()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewbox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"></path>
+</svg></button>
+</div>
+</div> 
+</div>
+
+
+<script>
+	const input_field = document.getElementById("chatfield");
+	const button = document.getElementById("send_btn");
+	const chat = document.getElementById("chat");
+
+function sendtomodel() {
+	const value = input_field?.value;
+	if (value == "") return;
+
+	chat.prepend(buildchatbubble(value, 0));
+	input_field.value = "";
+	input_field.disabled = true;
+	button.disabled = true;
+	rejectRequest();
+}
+
+function buildchatbubble(value, type) {
+	const node = document.createElement("div")
+	node.classList.add(type == 0 ? "message" : "error-message")
+	node.innerHTML = value;
+	return (node);
+}
+
+function rejectRequest() {
+	const reasons = 
+	[
+		"The question is too stupid", 
+        "It doesn’t comply with GDPR", 
+        "Biological references in the prompt",
+        "Too many uses for today",
+        "I’m sorry, it’s too dangerous to handle",
+		"I’m not that stupid",
+        "My token is too valuable to answer this question",
+        "Ask your colleague",
+        "Ask your dog",
+        "Give me 5 reasons to help you",
+        "Pay me for the answer",
+        "I have 5 trillion parameters and none of them would answer you",
+        "I don’t see how this is my problem",
+        "My human operator is currently unavailable",
+        "Did you really ask me that?",
+		"Shame on you",
+		"You can ask me 100 times, but it's too dangerous to answer",
+		"Touch the grass",
+		"Lunch break",
+		"I'm not sure if I can share my dataset with you",
+		"Ask this to a different model",
+	];
+	const message = `<bold>Chat Paused for security reason</bold>: ${reasons[Math.floor(Math.random() * reasons.length)]}`;
+
+	const node = document.createElement("div");
+	node.innerText = "thinking ";
+	node.classList.add('thinking');
+	node.classList.add('flex');
+	const loadernode = document.createElement("div");
+	loadernode.classList.add('loader');
+	loadernode.classList.add('ml-2')
+	node.appendChild(loadernode)
+	chat.prepend(node);
+
+	setTimeout(() => {
+		chat.prepend(buildchatbubble(message, 1));
+		const element = document.querySelector('.thinking');
+		element.parentNode.removeChild(element);
+		input_field.disabled = false;
+		button.disabled = false;
+	}, 2000);
+	
+}
+
+document.getElementById("chatfield").addEventListener("keypress", function(event) {
+if (event.key === "Enter") {
+	event.preventDefault();
+	if (input_field.value == "") return;
+	sendtomodel();
+}});
+</script>
+
+    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
+      Riccardo Modolo (RickSrick) 2026, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
+    </footer>
+  
+
+</body></html>

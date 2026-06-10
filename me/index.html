@@ -22,7 +22,7 @@
       }
     </script>
 
-    <div class="mb-5 mt-10 max-h-20" role="navigation">
+    <div class="mb-5 mt-10" role="navigation">
       <button class="w-full focus:outline-0" type="button" onclick="changeTheme()"> 
         <img src="./images/icon.webp" alt="me" class="w-8 h-8 dark:invert mt-1 mb-1 content-center justify-self-center">
       </button>
@@ -30,13 +30,14 @@
       <div class="flex flex-row justify-center flex-wrap mt-2">
         <a href="./index.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#17C3B2] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none ">Home</a>
         <a href="./about.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FE6D73] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">About</a>
+        <a href="./bestmodel.html" class="dark:text-[#dbd1ca] decoration-wavy decoration-2 decoration-[#FCD495] mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none  no-underline ">My LLM</a>
         <!--<a href="https://ricksrick.github.io/obsnote/welcome.html" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Notes</a>-->
         <a href="https://github.com/RickSrick" class="dark:text-[#dbd1ca] no-underline mx-5 transition duration-400 hover:scale-105 hover:font-bold select-none">Github</a>
       </div>
     </div>
 
-    <div class="flex-grow" role="main">
-      <div class="flex max-sm:flex-wrap-reverse justify-items-stretch flex-row mt-5 mb-5 items-center justify-between justify-items-center">
+      <div class="flex-grow" role="main">
+<div class="flex max-sm:flex-wrap-reverse justify-items-stretch flex-row mt-5 mb-5 items-center justify-between justify-items-center">
     <div class="max-sm:w-full">
         <h2 class="mb-2 mt-2 text-3xl dark:text-[#dbd1ca]">Hi, I'm Rick <span id="emote"></span>,</h2>
         This is my own little web garden 🌱.<br>
@@ -135,7 +136,7 @@ const emoji = ["😎", "🎓", "📚", "🇮🇹"];
 let selectedEmoji = emoji[Math.floor(Math.random() * emoji.length)];
 document.getElementById("emote").innerHTML = selectedEmoji;
 </script>
-    </div>
+</div>
 
     <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
       Riccardo Modolo (RickSrick) 2026, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
