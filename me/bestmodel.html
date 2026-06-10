@@ -36,7 +36,7 @@
       </div>
     </div>
 
-      <div class="accordion">
+      <div class="accordion dark:!text-[#374151]">
 <details>
 <summary>Warning!</summary>
 <div class="p-2 bg-[#ffe6de] flex"><div class="p-2 w-0 max-h-40"><svg class="w-auto h-full px-2 pr-4 text-[#ffbab5]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
@@ -47,7 +47,7 @@
 </div>
 <div class="flex-grow min-h-0" role="main">
 <div class="w-full relative h-full flex flex-col p-4">
-<div id="chat" class="flex-1 min-h-0 scrollbar-gutter-stable overflow-y-auto flex flex-col-reverse items-end">
+<div id="chat" class="dark:!text-[#374151] flex-1 min-h-0 scrollbar-gutter-stable overflow-y-auto flex flex-col-reverse items-end">
 <div class="flex-1"></div>
 </div>
 <div class="w-full flex">
@@ -113,17 +113,18 @@ function rejectRequest() {
 	const node = document.createElement("div");
 	node.innerText = "thinking ";
 	node.classList.add('thinking');
+	node.classList.add('dark:!text-[#dbd1ca]')
 	node.classList.add('flex');
 	const loadernode = document.createElement("div");
 	loadernode.classList.add('loader');
-	loadernode.classList.add('ml-2')
+	loadernode.classList.add('ml-2');
 	node.appendChild(loadernode)
 	chat.prepend(node);
 
 	setTimeout(() => {
 		chat.prepend(buildchatbubble(message, 1));
 		const element = document.querySelector('.thinking');
-		element.parentNode.removeChild(element);
+		//element.parentNode.removeChild(element);
 		input_field.disabled = false;
 		button.disabled = false;
 	}, 2000);
