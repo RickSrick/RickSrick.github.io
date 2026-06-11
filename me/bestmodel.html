@@ -46,24 +46,27 @@
 </details>
 </div>
 <div class="flex-grow min-h-0" role="main">
-<div class="w-full relative h-full flex flex-col p-4">
+<div class="w-full relative h-full flex flex-col py-4">
 <div id="chat" class="dark:!text-[#374151] flex-1 min-h-0 scrollbar-gutter-stable overflow-y-auto flex flex-col-reverse items-end">
 <div class="flex-1"></div>
 </div>
 <div class="w-full flex">
-<input class="disabled:opacity-50 border-2 flex-1 border-solid rounded px-2" name="chatfield" type="text" id="chatfield">
-<button id="send_btn" class="disabled:opacity-50 no-underline text-[#0D0D0D] bg-[#17C3B2] font-bold px-4 rounded ml-1" onclick="sendtomodel()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewbox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"></path>
-</svg></button>
+<input class="disabled:opacity-50 border-2 flex-1 border-solid rounded px-2" name="chatfield" type="text" id="chatfield" autocomplete="off">
+<button id="send_btn" class="disabled:opacity-50 no-underline text-[#0D0D0D] bg-[#17C3B2] font-bold px-4 rounded ml-1" onclick="sendtomodel()" disabled="">
+<svg style="color: #00242e;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124"></path>
+  <path d="M6.5 12h14.5"></path>
+</svg>
+</button>
 </div>
 </div> 
 </div>
 
 
 <script>
-	const input_field = document.getElementById("chatfield");
-	const button = document.getElementById("send_btn");
-	const chat = document.getElementById("chat");
+const input_field = document.getElementById("chatfield");
+const button = document.getElementById("send_btn");
+const chat = document.getElementById("chat");
 
 function sendtomodel() {
 	const value = input_field?.value;
@@ -84,8 +87,7 @@ function buildchatbubble(value, type) {
 }
 
 function rejectRequest() {
-	const reasons = 
-	[
+	const reasons = [
 		"The question is too stupid", 
         "It doesn’t comply with GDPR", 
         "Biological references in the prompt",
@@ -121,25 +123,30 @@ function rejectRequest() {
 	node.appendChild(loadernode)
 	chat.prepend(node);
 
+	const timeOut = ((Math.floor(Math.random() * 5)) * 500) + 500;
 	setTimeout(() => {
 		chat.prepend(buildchatbubble(message, 1));
 		const element = document.querySelector('.thinking');
 		element.parentNode.removeChild(element);
 		input_field.disabled = false;
-		button.disabled = false;
-	}, 2000);
+		button.disabled = (input_field.value?.trim() == "");
+	}, timeOut);
 	
 }
 
 document.getElementById("chatfield").addEventListener("keypress", function(event) {
 if (event.key === "Enter") {
 	event.preventDefault();
-	if (input_field.value == "") return;
+	if (input_field.value?.trim() == "") return;
 	sendtomodel();
 }});
+document.getElementById("chatfield").addEventListener("input", function(event) {
+	event.preventDefault();
+	button.disabled = (input_field.value?.trim() == "")
+});
 </script>
 
-    <footer class="text-center py-10 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
+    <footer class="text-center py-5 bg-[#FEF9EF] text-sm dark:bg-[#2c343c] w-full" role="contentinfo">
       Riccardo Modolo (RickSrick) 2026, made with <a href="https://lume.land/" class="dark:text-[#dbd1ca]">lume</a>
     </footer>
   
